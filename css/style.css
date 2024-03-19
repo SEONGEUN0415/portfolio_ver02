@@ -1,0 +1,67 @@
+@import url("reset.css");
+@import url("common.css");
+@import url("common.scss");
+:root {
+  --font-kr: ;
+  --font-en: ;
+  --title-size: 20rem;
+  --color-beige: #F6EDD9;
+  --color-yellow: #FFDE82;
+  --color-white: #fff;
+  --color-darkGreen: #424242;
+}
+
+.header {
+  position: relative;
+  background-color: black;
+  height: 500px;
+}
+.header .util {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  gap: 60px;
+}
+.header .util button {
+  transform: rotate(-90deg);
+  background-color: #424242;
+  color: #fff;
+  padding: 20px 30px;
+}
+.header .util .language--btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .header end */
+.inner {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.main__visual figure {
+  width: 390px;
+  height: 440px;
+  border: solid var(--color-beige) 5px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main__visual figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main__visual h2 {
+  font-size: 15rem;
+}
+.main__visual h2 strong {
+  display: block;
+  color: var(--color-yellow);
+}/*# sourceMappingURL=style.css.map */

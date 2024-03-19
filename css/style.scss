@@ -1,0 +1,71 @@
+@charset 'utf-8';
+@import url('reset.css');
+@import url("common.css");
+@import url('common.scss');
+
+
+:root{
+    --font-kr: ;
+    --font-en: ;
+    --title-size: 20rem;
+    --color-beige: #F6EDD9;
+    --color-yellow: #FFDE82;
+    --color-white: #fff;
+    --color-darkGreen: #424242;
+}
+
+.header{
+    position: relative;
+    background-color: black;
+    height: 500px;
+    .util{ 
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+        gap: 60px;
+        button{
+            transform: rotate(-90deg);
+            background-color: #424242;
+            color: #fff;
+            padding: 20px 30px;
+        }
+        .language--btn{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+        }
+
+    }
+
+}/* .header end */
+.inner{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.main__visual{
+    figure{
+        width: 390px;
+        height: 440px;
+        border: solid var(--color-beige) 5px;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+    h2{
+        font-size: 15rem;
+        strong{
+            display: block;
+            color: var(--color-yellow)
+        }
+    }
+}

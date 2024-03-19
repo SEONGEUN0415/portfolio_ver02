@@ -1,0 +1,26 @@
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+html, body{
+    font-size: 62.5%;
+}
+body{
+    line-height: 1;
+    color: #333;
+}
