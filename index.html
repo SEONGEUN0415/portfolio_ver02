@@ -4,8 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>April's portfolio</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style.scss">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style.scss" />
+
+        <script src="lib/jquery-3.7.1.min.js"></script>
+        <script src="lib/jquery-ui.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <div id="wrap">
@@ -17,43 +21,54 @@
                         <li><a href="#">About</a></li>
                         <li><a href="#">Web Design</a></li>
                         <li><a href="#">Graphic Design</a></li>
-                    </ul><!-- .gnb end -->
-                </nav><!-- menu-pc end -->
-               
-            </header><!-- .header end -->
+                    </ul>
+                    <!-- .gnb end -->
+                </nav>
+                <!-- menu-pc end -->
+            </header>
+            <!-- .header end -->
             <section class="main__visual">
                 <div class="util">
                     <button class="language--btn">
                         <span>KOR</span>
                         <div class="toggle--btn">
-                            <div class="toggle__switch--btn">
-                                스위치
-                            </div>
-                        </div><!-- .toggle--btn end -->
-                        <span>ENG</span>
-                    </button><!-- .language--btn end -->
-                    <button class="resume--btn">
-                        이력서 다운받기
-                    </button><!-- .resume--btn end -->
-                    <button class="work--btn">
-                        프로젝트 보러가기
-                    </button><!-- .work--btn end -->
-                </div><!-- .util end -->
+                            <div class="toggle__switch--btn">스위치</div>
+                        </div>
+                        <!-- .toggle--btn end -->
+                        <span>ENG</span></button
+                    ><!-- .language--btn end -->
+                    <button class="resume--btn">이력서 다운받기</button
+                    ><!-- .resume--btn end -->
+                    <button class="work--btn">프로젝트 보러가기</button
+                    ><!-- .work--btn end -->
+                </div>
+                <!-- .util end -->
                 <div class="inner">
                     <figure>
-                        <img src="img/mainvisual-avarta.png" alt="avarta">
+                        <img src="img/mainvisual-avarta.png" alt="avarta" />
                     </figure>
                     <div>
-                        <h2>HELLO <br />I'm <strong>a Web Designer</strong></h2>
-                        <p>Enjoying learning new skills to improve the quality of websites and my coding ability</p>
+                        <h2>
+                            HELLO
+                            <br />I'm <br />
+                            <p class="typing"></p>
+                        </h2>
+                        <p>
+                            Enjoying learning new skills to improve the quality
+                            of websites and my coding skills
+                        </p>
                     </div>
-                </div><!-- .inner end -->
-               
-
-            </section><!-- .main__visual end -->
-            <section class="skills">
-                
+                    <ul class="typing-txt">
+                        <li>a Web Publisher</li>
+                        <li>a Web Designer</li>
+                        <li>Seongeun Park</li>
+                    </ul>
+                </div>
+                <!-- .inner end -->
             </section>
-        </div><!-- #wrap end -->
+            <!-- .main__visual end -->
+            <section class="skills"></section>
+        </div>
+        <!-- #wrap end -->
     </body>
 </html>
