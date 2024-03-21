@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("reset.css");
 @import url("common.css");
 @import url("common.scss");
@@ -50,8 +51,9 @@
   font-display: swap;
 }
 :root {
-  --font-kr: ;
-  --font-en: ;
+  --font-kr: "pretendard";
+  --font-en-title: "Stint Ultra Expanded";
+  --font-en-body: "Source Sans 3";
   --title-size: 20rem;
   --color-beige: #f6edd9;
   --color-yellow: #ffde82;
@@ -62,6 +64,19 @@
 
 h2 {
   color: var(--color-white);
+  font-style: var(--font-en-title);
+}
+
+h3 {
+  font-family: var(--font-en-title);
+}
+
+section {
+  padding: 13.5rem 0;
+}
+
+body {
+  background: url("../img/bg.png") center/cover no-repeat fixed;
 }
 
 /* .header {
@@ -79,11 +94,10 @@ h2 {
   position: relative;
 }
 .header .menu__pc {
-  position: absolute;
+  position: fixed;
   z-index: 9999;
-  top: 5rem;
+  top: 100px;
   right: 50px;
-  transform: translateY(100%);
 }
 .header .menu__pc .gnb li {
   text-align: end;
@@ -107,36 +121,84 @@ h2 {
   margin-left: 10px;
 }
 
+/* .header end */
+/* mainVisual */
 .main__visual {
   height: 100vh;
   position: relative;
   display: flex;
   font-family: "Stint Ultra Expanded";
-  background: url("../img/mainvisual-bg.png") center/cover no-repeat;
 }
 .main__visual .util {
   position: fixed;
-  left: 0;
+  left: -100px;
   top: 0;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  gap: 120px;
+  gap: 160px;
   z-index: 888;
+  /* 토글 버튼 */
+  /* 체크박스가 체크되면 변경 이벤트 */
+}
+.main__visual .util .toggleSwitch {
+  width: 100px;
+  height: 50px;
+  display: block;
+  position: relative;
+  border-radius: 30px;
+  background-color: #007380;
+  box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transform: rotate(-90deg);
+  left: 100px;
+  top: 50px;
+  border: var(--color-darkGreen) 2px solid;
+  margin-bottom: 20px;
+}
+.main__visual .util .toggleSwitch .toggleButton {
+  /* 버튼은 토글보다 작아야함  */
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: transparent;
+  background: url(../img/flag-korean.png) center/100% no-repeat;
+}
+.main__visual .util #toggle:checked ~ .toggleSwitch {
+  background: #3E59B0;
+}
+.main__visual .util #toggle:checked ~ .toggleSwitch .toggleButton {
+  left: calc(100% - 44px);
+  background: url(../img/flag-british.png) center/100% no-repeat;
+}
+.main__visual .util .toggleSwitch,
+.main__visual .util .toggleButton {
+  transition: all 0.2s ease-in;
 }
 .main__visual .util button {
   transform: rotate(-90deg);
-  background-color: var(--color-darkGreen);
-  color: #fff;
-  padding: 20px 30px;
+  background-color: var(--color-lightGreen);
+  border: 3px solid var(--color-darkGreen);
+  padding: 56px 75px 20px;
   font-family: "pretendard";
-  font-size: 14px;
-}
-.main__visual .util .language--btn {
+  font-size: 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+}
+.main__visual .util .resume--btn {
+  display: flex;
+}
+.main__visual .util .resume--btn img {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  transform: rotate(90deg);
 }
 .main__visual .inner {
   height: 100%;
@@ -145,18 +207,16 @@ h2 {
   position: absolute;
   right: 20%;
   transform: translateY(15%);
-  top: 100px;
-  width: 390px;
-  height: 440px;
+  top: 12%;
+  width: 300px;
+  height: 350px;
 }
 .main__visual .inner figure img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .main__visual .inner div {
-  padding: 250px 0;
+  margin-top: 80px;
 }
 .main__visual .inner div h2 {
   font-size: 15rem;
@@ -182,6 +242,7 @@ h2 {
   margin-top: 4rem;
 }
 
+/* main__visual end */
 @keyframes cursor {
   0% {
     border-right: 1px solid #fff;
@@ -192,4 +253,46 @@ h2 {
   100% {
     border-right: 1px solid #fff;
   }
+} /* mainvisual typing */
+/* skills */
+.skills {
+  color: var(--color-white);
+}
+.skills h3 {
+  font-size: 20rem;
+  margin: 0 0 135px 109px;
+}
+.skills .skills__des p {
+  word-break: keep-all;
+  text-align: end;
+  font-size: 50px;
+  display: none;
+  margin-bottom: 20rem;
+  line-height: 1.3;
+  font-family: var(--font-kr);
+  width: 80%;
+  margin-left: auto;
+}
+.skills .skills__des p:nth-child(1) {
+  display: block;
+}
+.skills .skills__des--icon {
+  display: flex;
+  justify-content: end;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  position: relative;
+  padding-top: 60px;
+}
+.skills .skills__des--icon li img {
+  width: 80px;
+  height: 80px;
+}
+.skills .skills__des--icon::before {
+  content: "아이콘을 클릭해 보세요!";
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  font-family: var(--font-kr);
 }/*# sourceMappingURL=style.css.map */

@@ -71,8 +71,9 @@
 }
 
 :root {
-    --font-kr: ;
-    --font-en: ;
+    --font-kr: "pretendard";
+    --font-en-title: "Stint Ultra Expanded";
+    --font-en-body: "Source Sans 3";
     --title-size: 20rem;
     --color-beige: #f6edd9;
     --color-yellow: #ffde82;
@@ -80,8 +81,19 @@
     --color-darkGreen: #3c4a3e;
     --color-lightGreen: #d6fadc;
 }
+
 h2 {
     color: var(--color-white);
+    font-style: var(--font-en-title);
+}
+h3{
+    font-family: var(--font-en-title);
+}
+section {
+    padding: 13.5rem 0;
+}
+body{
+    background: url("../img/bg.png") center / cover no-repeat fixed;
 }
 /* .header {
     position: relative;
@@ -97,11 +109,11 @@ h2 {
 .header {
     position: relative;
     .menu__pc {
-        position: absolute;
+        position: fixed;
         z-index: 9999;
-        top: 5rem;
+        top: 100px;
         right: 50px;
-        transform: translateY(100%);
+
         .gnb {
             li {
                 text-align: end;
@@ -128,35 +140,89 @@ h2 {
             }
         }
     }
-}
+} /* .header end */
+
+/* mainVisual */
+
 .main__visual {
     height: 100vh;
     position: relative;
     display: flex;
     font-family: "Stint Ultra Expanded";
-    background: url("../img/mainvisual-bg.png") center / cover no-repeat;
+    
+
     .util {
         position: fixed;
-        left: 0;
+        left: -100px;
         top: 0;
         display: flex;
         flex-direction: column;
         height: 100%;
         justify-content: center;
-        gap: 120px;
+        gap: 160px;
         z-index: 888;
+
+        /* 토글 버튼 */
+        .toggleSwitch {
+            width: 100px;
+            height: 50px;
+            display: block;
+            position: relative;
+            border-radius: 30px;
+            background-color: #007380;
+            box-shadow: 0 0 16px 3px rgba(0 0 0 / 15%);
+            cursor: pointer;
+            transform: rotate(-90deg);
+            left: 100px;
+            top: 50px;
+            border: var(--color-darkGreen) 2px solid;
+            margin-bottom: 20px;
+            .toggleButton {
+                /* 버튼은 토글보다 작아야함  */
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 50%;
+                left: 4px;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                background: transparent;
+                background: url(../img/flag-korean.png) center / 100% no-repeat;
+            }
+        }
+        /* 체크박스가 체크되면 변경 이벤트 */
+        #toggle:checked ~ .toggleSwitch {
+            background: #3E59B0;
+        }
+
+        #toggle:checked ~ .toggleSwitch .toggleButton {
+            left: calc(100% - 44px);
+            background: url(../img/flag-british.png) center / 100% no-repeat;
+        }
+
+        .toggleSwitch,
+        .toggleButton {
+            transition: all 0.2s ease-in;
+        }
         button {
             transform: rotate(-90deg);
-            background-color: var(--color-darkGreen);
-            color: #fff;
-            padding: 20px 30px;
+            background-color: var(--color-lightGreen);
+            border: 3px solid var(--color-darkGreen);
+            padding: 56px 75px 20px;
             font-family: "pretendard";
-            font-size: 14px;
-        }
-        .language--btn {
+            font-size: 25px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
+        }
+        .resume--btn{
+            display: flex;
+            img{
+                width: 35px;
+                height: 35px;
+                margin-left: 10px;
+                transform: rotate(90deg);
+            }
         }
     }
     .inner {
@@ -165,22 +231,20 @@ h2 {
             position: absolute;
             right: 20%;
             transform: translateY(15%);
-            top: 100px;
-            width: 390px;
-            height: 440px;
+            top: 12%;
+            width: 300px;
+            height: 350px;
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
             }
         }
         div {
-            padding: 250px 0;
+            margin-top: 80px;
             h2 {
                 font-size: 15rem;
                 p {
                     line-height: 1.3;
-                    
                     color: var(--color-white);
                     display: inline-block;
                     animation-name: cursor;
@@ -195,14 +259,14 @@ h2 {
         .typing-txt {
             display: none;
         }
-        p{
+        p {
             font-size: 4.5rem;
             color: var(--color-white);
             line-height: 1.3;
             margin-top: 4rem;
         }
     }
-}
+} /* main__visual end */
 
 @keyframes cursor {
     0% {
@@ -213,5 +277,52 @@ h2 {
     }
     100% {
         border-right: 1px solid #fff;
+    }
+} /* mainvisual typing */
+
+/* skills */
+.skills {
+    color: var(--color-white);
+    h3 {
+        font-size: 20rem;
+        margin: 0 0 135px 109px;
+    }
+    .skills__des {
+        p {
+            word-break: keep-all;
+            text-align: end;
+            font-size: 50px;
+            display: none;
+            margin-bottom: 20rem;
+            line-height: 1.3;
+            font-family: var(--font-kr);
+            width: 80%;
+            margin-left: auto;
+            &:nth-child(1) {
+                display: block;
+            }
+        }
+        &--icon {
+            display: flex;
+            justify-content: end;
+            column-gap: 30px;
+            position: relative;
+            padding-top: 60px;
+            li {
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+
+            &::before {
+                content: "아이콘을 클릭해 보세요!";
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 20px;
+                font-family: var(--font-kr);
+            }
+        }
     }
 }

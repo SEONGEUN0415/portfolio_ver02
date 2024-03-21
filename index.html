@@ -29,17 +29,23 @@
             <!-- .header end -->
             <section class="main__visual">
                 <div class="util">
-                    <button class="language--btn">
-                        <span>KOR</span>
-                        <div class="toggle--btn">
-                            <div class="toggle__switch--btn">스위치</div>
-                        </div>
-                        <!-- .toggle--btn end -->
-                        <span>ENG</span></button
-                    ><!-- .language--btn end -->
-                    <button class="resume--btn">이력서 다운받기</button
+                    <!-- <button class="language--btn">
+                        <span>KOR</span> -->
+                    <input type="checkbox" id="toggle" hidden />
+
+                    <label for="toggle" class="toggleSwitch">
+                        <span class="toggleButton"></span>
+                    </label>
+                    <!--      <span>ENG</span></button
+                    > --><!-- .language--btn end -->
+                    <button class="resume--btn">
+                        이력서
+                        <img
+                            src="img/arrow-dark.png"
+                            alt="arrow-down"
+                        /></button
                     ><!-- .resume--btn end -->
-                    <button class="work--btn">프로젝트 보러가기</button
+                    <button class="work--btn">My work</button
                     ><!-- .work--btn end -->
                 </div>
                 <!-- .util end -->
@@ -67,7 +73,55 @@
                 <!-- .inner end -->
             </section>
             <!-- .main__visual end -->
-            <section class="skills"></section>
+            <section class="skills">
+                <div class="inner">
+                    <h3>My skills</h3>
+                    <div class="skills__des">
+                        <p>
+                            웹, 테블릿, 모바일과 같은 다양한 디바이스 환경을
+                            고려한 레이아웃과 코드 작성
+                        </p>
+                        <p>css설명</p>
+                        <p>js설명</p>
+                        <p>photosop설명</p>
+                        <p>illust설명</p>
+                        <p>figma설명</p>
+                        <p>jquery설명</p>
+                        <p>react설명</p>
+                        <p>github설명</p>
+                        <ul class="skills__des--icon">
+                            <li><img src="img/html.png" alt="html-icon" /></li>
+                            <li><img src="img/css.png" alt="css-icon" /></li>
+                            <li><img src="img/js.png" alt="js-icon" /></li>
+                            <li>
+                                <img
+                                    src="img/photoshop.png"
+                                    alt="photoshop-icon"
+                                />
+                            </li>
+                            <li>
+                                <img
+                                    src="img/illustrator.png"
+                                    alt="illust-icon"
+                                />
+                            </li>
+                            <li>
+                                <img src="img/figma.png" alt="figma-icon" />
+                            </li>
+                            <li>
+                                <img src="img/jquery.png" alt="jquery-icon" />
+                            </li>
+                            <li>
+                                <img src="img/react.png" alt="react-icon" />
+                            </li>
+                            <li>
+                                <img src="img/github.png" alt="github-icon" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- skills end -->
         </div>
         <!-- #wrap end -->
     </body>
