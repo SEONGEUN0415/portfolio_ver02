@@ -65,6 +65,7 @@
 h2 {
   color: var(--color-white);
   font-style: var(--font-en-title);
+  font-size: 15rem;
 }
 
 h3 {
@@ -107,7 +108,7 @@ body {
   font-size: 18px;
   height: 25px;
   line-height: 50px;
-  color: var(--color-white);
+  color: var(--color-lightGreen);
 }
 .header .menu__pc .gnb li a {
   display: flex;
@@ -133,12 +134,12 @@ body {
 }
 .main__visual .util {
   position: fixed;
-  left: -90px;
-  top: 0;
+  left: 0;
+  top: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 120px;
+  align-items: center;
   z-index: 888;
   /* 토글 버튼 */
   /* 체크박스가 체크되면 변경 이벤트 */
@@ -164,10 +165,10 @@ body {
   box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transform: rotate(-90deg);
-  left: 80px;
-  top: 50px;
+  left: -20%;
+  top: 0;
   border: var(--color-darkGreen) 2px solid;
-  margin-bottom: 20px;
+  margin-bottom: 20%;
 }
 .main__visual .util .toggleSwitch .toggleButton {
   /* 버튼은 토글보다 작아야함  */
@@ -192,30 +193,48 @@ body {
 .main__visual .util .toggleButton {
   transition: all 0.2s ease-in;
 }
-.main__visual .util .resume--btn #container {
+.main__visual .util .resume--btn,
+.main__visual .util .work--btn {
+  height: 250px;
+}
+.main__visual .util .resume--btn #container,
+.main__visual .util .work--btn #container {
   margin: 0%;
-  display: flex;
+  /*  display: flex;
   justify-content: center;
-  align-items: center;
-  height: 500px;
-  width: 500px;
+  align-items: center; */
+  height: 400px;
+  width: 400px;
+  position: relative;
 }
-.main__visual .util .resume--btn #sam-quote {
-  font-size: 14px;
-  letter-spacing: 0.34px;
+.main__visual .util .resume--btn #container img,
+.main__visual .util .work--btn #container img {
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.main__visual .util .resume--btn #circle {
+.main__visual .util .resume--btn #sam-quote,
+.main__visual .util .work--btn #sam-quote {
+  font-size: 18px;
+  letter-spacing: 0.6px;
+}
+.main__visual .util .resume--btn #circle,
+.main__visual .util .work--btn #circle {
   position: relative;
   width: 100%;
   padding-bottom: 100%;
   overflow: hidden;
 }
-.main__visual .util .resume--btn #circle svg {
+.main__visual .util .resume--btn #circle svg,
+.main__visual .util .work--btn #circle svg {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 500px;
+  height: 100%;
   animation-name: rotate;
   animation-duration: 9s;
   animation-iteration-count: infinite;
@@ -228,6 +247,10 @@ body {
   to {
     transform: rotate(0);
   }
+}
+.main__visual .util .work--btn #container img {
+  width: 120px;
+  height: 130px;
 }
 .main__visual .inner {
   height: 100%;
@@ -245,7 +268,6 @@ body {
   height: 100%;
 }
 .main__visual .inner div h2 {
-  font-size: 15rem;
   position: relative;
 }
 .main__visual .inner div h2 strong {
@@ -276,7 +298,7 @@ body {
 /* main__visual end */
 @keyframes cursor {
   0% {
-    border-right: 1px solid #fff;
+    border-right: 1px solid #ffffff;
   }
   50% {
     border-right: 1px solid #000;
@@ -316,8 +338,8 @@ body {
   cursor: pointer;
 }
 .skills .skills__des--icon li img {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
 }
 .skills .skills__des--icon::before {
   content: "아이콘을 클릭해 보세요!";
@@ -331,47 +353,24 @@ body {
 
 /* skill end */
 .about {
+  position: relative;
   color: var(--color-white);
+  /* .list end */
 }
 .about h3 {
   margin-bottom: 135px;
 }
-.about .list {
-  /* .list__about end */
-}
-.about .list .item {
-  margin-bottom: 6rem;
-}
-.about .list .item h4 {
-  color: var(--color-yellow);
-  font-size: 5rem;
-  margin-bottom: 5rem;
-}
-.about .list .item h4::after {
-  content: "|";
-  width: 2px;
-  height: 100%;
-  margin-left: 20px;
-  display: inline-block;
-}
-.about .list .item ul li {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-.about .list__about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-.about .list__about h1.ml8 {
+.about h1.ml8 {
   font-weight: 100;
   font-size: 4.5em;
   color: #fff;
   width: 3em;
   height: 3em;
+  position: absolute;
+  top: 30%;
+  left: 55%;
 }
-.about .list__about .ml8 .letters-container {
+.about .ml8 .letters-container {
   position: absolute;
   left: 0;
   right: 0;
@@ -380,20 +379,7 @@ body {
   bottom: 0;
   height: 1em;
 }
-.about .list__about .ml8 .letters {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  line-height: 0.7em;
-  right: -0.12em;
-  top: -0.2em;
-}
-.about .list__about .ml8 .bang {
-  font-size: 1.3em;
-  top: auto;
-  left: -0.06em;
-}
-.about .list__about .ml8 .circle {
+.about .ml8 .circle {
   position: absolute;
   left: 0;
   right: 0;
@@ -401,60 +387,98 @@ body {
   top: 0;
   bottom: 0;
 }
-.about .list__about .ml8 .circle-white {
-  width: 41rem;
-  height: 41rem;
+.about .ml8 .circle-white {
+  width: 34rem;
+  height: 34rem;
   border: 2px dashed white;
   border-radius: 50%;
 }
-.about .list__about .ml8 .circle-dark {
-  width: 40rem;
-  height: 40rem;
-  background-color: rgba(239, 223, 130, 0.4941176471);
+.about .ml8 .circle-dark {
+  width: 50rem;
+  height: 50rem;
+  background-color: var(--color-yellow);
   border-radius: 50%;
   z-index: 1;
 }
-.about .list__about .ml8 .circle-dark figure img {
-  width: 100%;
-  height: 100%;
-}
-.about .list__about .ml8 .circle-dark-dashed {
+.about .ml8 .circle-dark-dashed {
   border-radius: 50%;
   background-color: transparent;
   border: 2px dashed var(--color-lightGreen);
-  width: 40rem;
-  height: 40rem;
+  width: 50rem;
+  height: 50rem;
 }
-.about .list__about figure {
+.about figure {
   order: 0;
-  width: 464px;
-  height: 750px;
-  margin-left: 50px;
+  /* width: 264px; */
+  width: 56.33%;
+  height: 500px;
+  margin-left: 150px;
+  margin-top: 50px;
   /* background-color: var(--color-beige); */
 }
-.about .list__about figure img {
+.about figure img {
   width: 100%;
   height: 100%;
 }
-.about .list__about div {
-  order: -1;
+.about .list {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 222;
+  position: relative;
 }
-.about .list__about div h4 {
-  font-size: 7rem;
+.about .list .item {
+  margin-bottom: 6rem;
+}
+.about .list .item h4 {
   color: var(--color-yellow);
-  margin-bottom: 5rem;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  line-height: 25px;
 }
-.about .list__about div h4::after {
-  content: "|";
-  width: 2px;
-  height: 80%;
-  margin-left: 20px;
+.about .list .item h4::after {
+  content: "";
+  width: 30px;
+  height: 25px;
+  margin-left: 10px;
   display: inline-block;
+  background: url("../img/star.png") center center/100% no-repeat;
 }
-.about .list__about div ul li {
-  font-size: 5rem;
+.about .list .item ul li {
+  font-size: 20px;
   margin-bottom: 2rem;
 }
-.about .list > div:nth-child(2) {
-  margin-top: 250px;
+.about .list .item ul li span {
+  margin-right: 20px;
+}
+.about .list__about {
+  width: 100%;
+  margin-left: 10%;
+}
+.about .list__edu {
+  width: 100%;
+  margin-left: 10%;
+}
+.about .list__certificate {
+  line-height: 1.3;
+  margin-left: 10%;
+}
+.about .list__interest ul {
+  display: flex;
+  gap: 15px;
+}
+.about .list__interest ul li {
+  line-height: 20px;
+}
+.about .list__interest ul li::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/heart-icon.png) center/100% no-repeat;
+  margin-left: 5px;
+}
+.about .list__interest ul li:last-child::after {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
