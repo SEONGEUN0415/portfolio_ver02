@@ -65,13 +65,14 @@
 h2 {
   color: var(--color-white);
   font-style: var(--font-en-title);
-  font-size: 15rem;
+  font-size: 13rem;
 }
 
 h3 {
   font-family: var(--font-en-title);
-  font-size: 13rem;
+  font-size: 8rem;
   text-align: center;
+  margin-bottom: 135px;
 }
 
 section {
@@ -131,10 +132,11 @@ body {
   position: relative;
   display: flex;
   font-family: "Stint Ultra Expanded";
+  height: 100vh;
 }
 .main__visual .util {
   position: fixed;
-  left: 0;
+  left: -20px;
   top: 130px;
   display: flex;
   flex-direction: column;
@@ -161,14 +163,14 @@ body {
   display: block;
   position: relative;
   border-radius: 30px;
-  background-color: #007380;
+  background-color: var(--color-darkGreen);
   box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transform: rotate(-90deg);
-  left: -20%;
+  left: 0;
   top: 0;
   border: var(--color-darkGreen) 2px solid;
-  margin-bottom: 20%;
+  margin-bottom: 200px;
 }
 .main__visual .util .toggleSwitch .toggleButton {
   /* 버튼은 토글보다 작아야함  */
@@ -195,7 +197,7 @@ body {
 }
 .main__visual .util .resume--btn,
 .main__visual .util .work--btn {
-  height: 250px;
+  height: 190px;
 }
 .main__visual .util .resume--btn #container,
 .main__visual .util .work--btn #container {
@@ -203,14 +205,14 @@ body {
   /*  display: flex;
   justify-content: center;
   align-items: center; */
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   position: relative;
 }
 .main__visual .util .resume--btn #container img,
 .main__visual .util .work--btn #container img {
-  width: 100px;
-  height: 150px;
+  width: 25%;
+  height: 32%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -249,23 +251,26 @@ body {
   }
 }
 .main__visual .util .work--btn #container img {
-  width: 120px;
-  height: 130px;
+  width: 30%;
+  height: 30%;
 }
 .main__visual .inner {
   height: 100%;
 }
 .main__visual .inner figure {
   position: absolute;
-  right: 20%;
-  transform: translateY(15%);
-  top: 5%;
-  width: 300px;
-  height: 350px;
+  right: 30%;
+  top: 20%;
+  width: 200px;
+  height: 230px;
 }
 .main__visual .inner figure img {
   width: 100%;
   height: 100%;
+}
+.main__visual .inner div {
+  margin-top: 50px;
+  margin-left: 110px;
 }
 .main__visual .inner div h2 {
   position: relative;
@@ -279,20 +284,19 @@ body {
   animation-iteration-count: infinite;
   display: inline-block;
   color: var(--color-yellow);
-  font-size: 15rem;
   font-style: normal;
   position: absolute;
-  bottom: -200px;
+  bottom: -170px;
   left: 0;
 }
 .main__visual .inner .typing-txt {
   display: none;
 }
 .main__visual .inner p {
-  font-size: 4.5rem;
+  font-size: 3rem;
   color: var(--color-white);
   line-height: 1.3;
-  margin-top: 25rem;
+  margin-top: 20rem;
 }
 
 /* main__visual end */
@@ -310,9 +314,6 @@ body {
 /* skills */
 .skills {
   color: var(--color-white);
-}
-.skills h3 {
-  margin-bottom: 135px;
 }
 .skills .skills__des p {
   word-break: keep-all;
@@ -356,9 +357,6 @@ body {
   position: relative;
   color: var(--color-white);
   /* .list end */
-}
-.about h3 {
-  margin-bottom: 135px;
 }
 .about h1.ml8 {
   font-weight: 100;
@@ -454,15 +452,18 @@ body {
 }
 .about .list__about {
   width: 100%;
-  margin-left: 10%;
+  margin-left: 6%;
 }
 .about .list__edu {
   width: 100%;
-  margin-left: 10%;
+  margin-left: 6%;
 }
 .about .list__certificate {
   line-height: 1.3;
-  margin-left: 10%;
+  margin-left: 6%;
+}
+.about .list__interest {
+  margin-left: 6%;
 }
 .about .list__interest ul {
   display: flex;
@@ -481,4 +482,118 @@ body {
 }
 .about .list__interest ul li:last-child::after {
   display: none;
+}
+
+/* .about end */
+/* work */
+.work {
+  color: #fff;
+  padding-top: 0;
+}
+.work .inner {
+  background-color: rgba(0, 0, 0, 0.158);
+  z-index: 111;
+  border-radius: 10px;
+  padding: 135px 0;
+  box-shadow: 10px 20px 20px 10px rgba(51, 51, 51, 0.568627451);
+}
+.work .inner .list .item {
+  margin-bottom: 15rem;
+}
+.work .inner .list .item h4 {
+  margin-left: 109px;
+  font-size: 3rem;
+  text-shadow: #000 10px 10px 10px 10px;
+}
+.work .inner .list .item h4 span {
+  margin-right: 60px;
+}
+.work .inner .list .item__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  /* .mock-up end */
+}
+.work .inner .list .item__visual .mock-up {
+  width: 50%;
+  position: relative;
+}
+.work .inner .list .item__visual .mock-up figure {
+  position: relative;
+}
+.work .inner .list .item__visual .mock-up figure img {
+  width: 650px;
+  height: 450px;
+}
+.work .inner .list .item__visual .mock-up figure div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #000;
+}
+.work .inner .list .item__visual .mock-up figure:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.work .inner .list .item__visual .mock-up figure:nth-child(2) img {
+  width: 300px;
+  height: 300px;
+}
+.work .inner .list .item__visual--btn {
+  margin-left: 100px;
+}
+.work .inner .list .item__visual--btn p {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.work .inner .list .item__visual--btn button {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 18px;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  background-color: var(--color-yellow);
+}
+.work .inner .list .item__visual--btn button:nth-child(3) {
+  background-color: var(--color-beige);
+}
+.work .inner .list .item__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  border-radius: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+.work .inner .list .item__info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.work .inner .list .item__info h5 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.work .inner .list .item__info p {
+  font-size: 16px;
+}
+.work .inner .list .item__info__tool ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.work .inner .list .item__info__tool ul li {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--color-darkGreen);
 }/*# sourceMappingURL=style.css.map */
