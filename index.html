@@ -4,163 +4,139 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>April's portfolio</title>
-        <link
-            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-            rel="stylesheet"
-        />
+
+        <link rel="stylesheet" href="lib/fullpage.min.css" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/style.scss" />
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="lib/jquery-3.7.1.min.js"></script>
         <script src="lib/jquery-ui.min.js"></script>
+        <script src="lib/fullpage.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
-        <div id="wrap">
-            <header class="header" id="header">
-                <nav class="menu__pc">
-                    <ul class="gnb">
-                        <li><a href="#">Intro</a></li>
-                        <li><a href="#">Skill</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                    </ul>
-                    <!-- .gnb end -->
-                </nav>
-                <!-- menu-pc end -->
-            </header>
-            <!-- .header end -->
-            <section class="main__visual">
-                <div class="util">
-                    <!-- <button class="language--btn">
-                        <span>KOR</span> -->
-                    <input type="checkbox" id="toggle" hidden />
+        <header class="header" id="header">
+           <!--  <nav class="menu__pc">
+                <ul class="gnb">
+                    <li><a href="#">Intro</a></li>
+                    <li><a href="#">Skill</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                </ul>
+                
+            </nav>
+            
+        </header>
+        <.header end !-->
+        <div class="language--btn">
+            <input type="checkbox" id="toggle" hidden />
 
-                    <label for="toggle" class="toggleSwitch">
-                        <span class="toggleButton"></span>
-                    </label>
-                    <!--      <span>ENG</span></button
-                    > --><!-- .language--btn end -->
-                    <button class="resume--btn">
-                        <div id="container">
-                            <img
-                                src="img/avarta03.png"
-                                alt="resume"
-                                id="aragorn"
-                            />
-                            <div id="circle">
-                                <svg
-                                    version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    x="0px"
-                                    y="0px"
-                                    width="350px"
-                                    height="300px"
-                                    viewBox="0 0 300 300"
-                                    enable-background="new 0 0 600 600"
-                                    xml:space="preserve"
-                                >
-                                    <defs>
-                                        <path
-                                            id="circlePath"
-                                            d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-                                        />
-                                    </defs>
-                                    <circle
-                                        cx="150"
-                                        cy="100"
-                                        r="75"
-                                        fill="none"
-                                    />
-                                    <g>
-                                        <use
-                                            xlink:href="#circlePath"
-                                            fill="transparent"
-                                        />
-                                        <text fill="#fff">
-                                            <textPath
-                                                id="sam-quote"
-                                                xlink:href="#circlePath"
-                                            >
-                                                DOWNLOAD MY RESUME DOWNLOAD MY
-                                                RESUME
-                                            </textPath>
-                                        </text>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div></button
-                    ><!-- .resume--btn end -->
-                    <button class="work--btn">
-                        <div id="container">
-                            <img
-                                src="img/avarta-heart.png"
-                                alt="resume"
-                                id="aragorn"
-                            />
-                            <div id="circle">
-                                <svg
-                                    version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    x="0px"
-                                    y="0px"
-                                    width="350px"
-                                    height="300px"
-                                    viewBox="0 0 300 300"
-                                    enable-background="new 0 0 600 600"
-                                    xml:space="preserve"
-                                >
-                                    <defs>
-                                        <path
-                                            id="circlePath"
-                                            d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-                                        />
-                                    </defs>
-                                    <circle
-                                        cx="150"
-                                        cy="100"
-                                        r="75"
-                                        fill="none"
-                                    />
-                                    <g>
-                                        <use
-                                            xlink:href="#circlePath"
-                                            fill="transparent"
-                                        />
-                                        <text fill="#fff">
-                                            <textPath
-                                                id="sam-quote"
-                                                xlink:href="#circlePath"
-                                            >
-                                                SEE MY WORK SEE MY WORK SEE MY
-                                                WORK
-                                            </textPath>
-                                        </text>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div></button
-                    ><!-- .work--btn end -->
-                </div>
-                <!-- .util end -->
+            <label for="toggle" class="toggleSwitch">
+                <span class="toggleButton"></span>
+            </label>
+        </div>
+        <div class="util">
+            <button class="resume--btn">
+                <div id="container">
+                    <img src="img/avarta03.png" alt="resume" id="aragorn" />
+                    <div id="circle">
+                        <svg
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            width="350px"
+                            height="300px"
+                            viewBox="0 0 300 300"
+                            enable-background="new 0 0 600 600"
+                            xml:space="preserve"
+                        >
+                            <defs>
+                                <path
+                                    id="circlePath"
+                                    d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+                                />
+                            </defs>
+                            <circle cx="150" cy="100" r="75" fill="none" />
+                            <g>
+                                <use
+                                    xlink:href="#circlePath"
+                                    fill="transparent"
+                                />
+                                <text fill="#fff">
+                                    <textPath
+                                        id="sam-quote"
+                                        xlink:href="#circlePath"
+                                    >
+                                        DOWNLOAD MY RESUME DOWNLOAD MY RESUME
+                                    </textPath>
+                                </text>
+                            </g>
+                        </svg>
+                    </div>
+                </div></button
+            ><!-- .resume--btn end -->
+            <button class="work--btn">
+                <div id="container">
+                    <img src="img/avarta-heart.png" alt="resume" id="aragorn" />
+                    <div id="circle">
+                        <svg
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            width="350px"
+                            height="300px"
+                            viewBox="0 0 300 300"
+                            enable-background="new 0 0 600 600"
+                            xml:space="preserve"
+                        >
+                            <defs>
+                                <path
+                                    id="circlePath"
+                                    d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+                                />
+                            </defs>
+                            <circle cx="150" cy="100" r="75" fill="none" />
+                            <g>
+                                <use
+                                    xlink:href="#circlePath"
+                                    fill="transparent"
+                                />
+                                <text fill="#fff">
+                                    <textPath
+                                        id="sam-quote"
+                                        xlink:href="#circlePath"
+                                    >
+                                        SEE MY WORK SEE MY WORK SEE MY WORK
+                                    </textPath>
+                                </text>
+                            </g>
+                        </svg>
+                    </div>
+                </div></button
+            ><!-- .work--btn end -->
+        </div>
+        <!-- .util end -->
+        <div id="fullpage">
+            <section class="main__visual section">
                 <div class="inner">
-                    <figure>
-                        <img src="img/mainvisual-avarta.png" alt="avarta" />
-                    </figure>
                     <div>
+                        <!-- <figure>
+                            <img src="img/mainvisual-avarta.png" alt="avarta" />
+                        </figure> -->
                         <h2>
                             HELLO
-                            <br />I'm <br />
+                            <br />I'm
                             <strong class="typing"></strong>
                         </h2>
                         <p>
                             Enjoying learning new skills to improve the quality
-                            of websites <br />and my coding skills
+                            of websites and my coding skills
                         </p>
                     </div>
                     <ul class="typing-txt">
@@ -172,10 +148,10 @@
                 <!-- .inner end -->
             </section>
             <!-- .main__visual end -->
-            <section class="skills">
+            <section class="skill section">
                 <div class="inner">
-                    <h3>My skills</h3>
-                    <div class="skills__des">
+                    <h3>My skill</h3>
+                    <div class="skill__des">
                         <p class="on">
                             웹, 테블릿, 모바일과 같은 다양한 디바이스 환경을
                             고려한 레이아웃과 코드 작성
@@ -188,7 +164,7 @@
                         <p>jquery설명</p>
                         <p>react설명</p>
                         <p>github설명</p>
-                        <ul class="skills__des--icon">
+                        <ul class="skill__des--icon">
                             <li><img src="img/html.png" alt="html-icon" /></li>
                             <li><img src="img/css.png" alt="css-icon" /></li>
                             <li><img src="img/js.png" alt="js-icon" /></li>
@@ -221,7 +197,7 @@
                 </div>
             </section>
             <!-- skills end -->
-            <section class="about">
+            <section class="about section">
                 <div class="inner">
                     <!-- <h3>About me</h3> -->
                     <h1 class="ml8">
@@ -291,7 +267,7 @@
                             <h4>WHAT I LIKE TO DO</h4>
                             <ul>
                                 <li>일주일 3번 운동하기</li>
-                                <li>모르는 장소에서 산책하기</li>
+                                <li>모르는 동네에서 산책하기</li>
                                 <li>EPL 축구경기보기</li>
                             </ul>
                         </div>
@@ -301,7 +277,7 @@
                 </div>
             </section>
             <!-- .about end -->
-            <section class="work">
+            <section class="work section fp-auto-height">
                 <div class="inner">
                     <h3>My work</h3>
                     <div class="list">
@@ -311,17 +287,17 @@
                                 <div class="mock-up">
                                     <figure>
                                         <img
-                                            src="img/pc-mockup-frame.png"
-                                            alt=""
+                                            src="img/younhyeon-mockup-pc.png"
+                                            alt="younhyeon-mockup-pc"
                                         />
-                                        <div>프레임</div>
+                                     
                                     </figure>
                                     <figure>
                                         <img
-                                            src="img/mobile-mockup-frame.png"
-                                            alt=""
+                                            src="img/younhyeon-mockup-mobile.png"
+                                            alt="younhyeon-mockup-mobile"
                                         />
-                                        <div>프레임</div>
+                                        
                                     </figure>
                                 </div>
                                 <!-- .mock-up end -->
@@ -377,17 +353,17 @@
                                 <div class="mock-up">
                                     <figure>
                                         <img
-                                            src="img/pc-mockup-frame.png"
-                                            alt=""
+                                            src="img/f5nature-mockup-pc.png"
+                                            alt="f5nature-mockup-pc"
                                         />
-                                        <div>프레임</div>
+                                        
                                     </figure>
                                     <figure>
                                         <img
-                                            src="img/mobile-mockup-frame.png"
-                                            alt=""
+                                            src="img/f5nature-mockup-mobile.png"
+                                            alt="f5nature-mockup-mobile"
                                         />
-                                        <div>프레임</div>
+                                      
                                     </figure>
                                 </div>
                                 <!-- .mock-up end -->
@@ -443,17 +419,15 @@
                                 <div class="mock-up">
                                     <figure>
                                         <img
-                                            src="img/pc-mockup-frame.png"
-                                            alt=""
+                                            src="img/espoir-mockup-pc.png"
+                                            alt="espoir-mockup-pc"
                                         />
-                                        <div>프레임</div>
                                     </figure>
                                     <figure>
                                         <img
-                                            src="img/mobile-mockup-frame.png"
+                                            src="img/espoir-mockup-mobile.png"
                                             alt=""
                                         />
-                                        <div>프레임</div>
                                     </figure>
                                 </div>
                                 <!-- .mock-up end -->
@@ -506,17 +480,9 @@
                                 <div class="mock-up">
                                     <figure>
                                         <img
-                                            src="img/pc-mockup-frame.png"
-                                            alt=""
+                                            src="img/yourbucket-mockup.png"
+                                            alt="yourbucket-mockup"
                                         />
-                                        <div>프레임</div>
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            src="img/mobile-mockup-frame.png"
-                                            alt=""
-                                        />
-                                        <div>프레임</div>
                                     </figure>
                                 </div>
                                 <!-- .mock-up end -->
@@ -569,17 +535,9 @@
                                 <div class="mock-up">
                                     <figure>
                                         <img
-                                            src="img/pc-mockup-frame.png"
-                                            alt=""
+                                            src="img/bhc-mockup.png"
+                                            alt="bhc-mockup"
                                         />
-                                        <div>프레임</div>
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            src="img/mobile-mockup-frame.png"
-                                            alt=""
-                                        />
-                                        <div>프레임</div>
                                     </figure>
                                 </div>
                                 <!-- .mock-up end -->
@@ -628,22 +586,14 @@
                         </div>
                         <!-- .item end -->
                         <div class="item">
-                            <h4><span>02</span>Twogood</h4>
+                            <h4><span>06</span>Twogood</h4>
                             <div class="item__visual">
                                 <div class="mock-up">
                                     <figure>
                                         <img
-                                            src="img/pc-mockup-frame.png"
+                                            src="img/twogood-mockup.png"
                                             alt=""
                                         />
-                                        <div>프레임</div>
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            src="img/mobile-mockup-frame.png"
-                                            alt=""
-                                        />
-                                        <div>프레임</div>
                                     </figure>
                                 </div>
                                 <!-- .mock-up end -->
@@ -697,17 +647,9 @@
                                 <div class="mock-up">
                                     <figure>
                                         <img
-                                            src="img/pc-mockup-frame.png"
-                                            alt=""
+                                            src="img/semie-mockup.png"
+                                            alt="semie-mockup"
                                         />
-                                        <div>프레임</div>
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            src="img/mobile-mockup-frame.png"
-                                            alt=""
-                                        />
-                                        <div>프레임</div>
                                     </figure>
                                 </div>
                                 <!-- .mock-up end -->
@@ -879,34 +821,27 @@
                                     />
                                 </li>
                             </ul>
-                        </div><!-- .list end -->
+                        </div>
+                        <!-- .list end -->
                         <div class="list">
                             <ul>
                                 <li data-aos="zoom-out-down">
-                                        <img
-                                            
-                                            src="img/photoshop-website-renewal.jpg"
-                                            alt="photoshop-renewal"
-                                        />
-                                   
+                                    <img
+                                        src="img/photoshop-website-renewal.jpg"
+                                        alt="photoshop-renewal"
+                                    />
                                 </li>
                                 <li data-aos="zoom-out-down">
-                                    
-                                        <img
-                                            
-                                            src="img/photoshop-poster.jpg"
-                                            alt="photoshop-poster"
-                                        />
-                                   
+                                    <img
+                                        src="img/photoshop-poster.jpg"
+                                        alt="photoshop-poster"
+                                    />
                                 </li>
                                 <li data-aos="zoom-out-down">
-                                    
-                                        <img
-                                           
-                                            src="img/photoshop_subpage.jpg"
-                                            alt="photoshop-subpage"
-                                        />
-                                   
+                                    <img
+                                        src="img/photoshop_subpage.jpg"
+                                        alt="photoshop-subpage"
+                                    />
                                 </li>
                             </ul>
                         </div>
