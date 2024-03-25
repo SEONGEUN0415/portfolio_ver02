@@ -127,22 +127,43 @@ $(function () {
 
     $html.animate({ scrollTop: 0 }, 10);
 
-    $(window).on("wheel", function(e){
- 
-        if($html.is(":animated")) return;
-     
-        if(e.originalEvent.deltaY > 0){
-            if(page== lastPage) return;
-     
+    $(window).on("wheel", function (e) {
+        if ($html.is(":animated")) return;
+
+        if (e.originalEvent.deltaY > 0) {
+            if (page == lastPage) return;
+
             page++;
-        }else if(e.originalEvent.deltaY < 0){
-            if(page == 1) return;
-     
+        } else if (e.originalEvent.deltaY < 0) {
+            if (page == 1) return;
+
             page--;
         }
-        var posTop = (page-1) * $(window).height();
-     
-        $html.animate({scrollTop : posTop});
-     
+        var posTop = (page - 1) * $(window).height();
+
+        $html.animate({ scrollTop: posTop });
     });
+
+    let scrollBar = $(window).scrollTop();
+    let work = $(".work");
+    let workTop = $(".work").offset().top;
+    $(window).scroll(function () {});
+
+    // aos library
+    AOS.init();
+
+    //graphic design tap menu
+    let designTapMenu = document.querySelectorAll(
+        ".design >ul li button"
+    );
+    let designList = document.querySelectorAll(".design .list");
+
+    for (let i = 0; i < designTapMenu.length; i++) {
+        designTapMenu[i].addEventListener("click", () => {
+            designList.forEach((item) => {
+                item.classList.remove('on');
+            });
+            designList[i].classList.add("on");
+        });
+    }
 });
