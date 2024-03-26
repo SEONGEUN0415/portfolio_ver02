@@ -208,7 +208,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 888;
-    animation: moveTo 5s linear;
+    animation: moveTo 4s linear;
 
     .resume--btn,
     .work--btn {
@@ -361,8 +361,8 @@ body {
     background: url("../img/mainv-bg.png") center center / cover no-repeat;
     .fp-overflow {
         height: 100%;
-    display: flex;
-    align-items: center;
+        display: flex;
+        align-items: center;
     }
     .inner {
         div {
@@ -375,14 +375,17 @@ body {
             h2 {
                 position: relative;
                 text-shadow: 10px 10px 10px var(--color-darkGreen);
+                
+                > div {
+                    height: 130px;
+                }
                 strong {
-                    display: block;
+                    display: inline-block;
                     animation-name: cursor;
                     animation-duration: 0.3s;
                     animation-iteration-count: infinite;
                     color: var(--color-yellow);
                     font-style: normal;
-                    height: 130px;
                 }
             }
         }

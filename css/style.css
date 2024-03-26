@@ -187,7 +187,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 888;
-  animation: moveTo 5s linear;
+  animation: moveTo 4s linear;
 }
 .util .resume--btn,
 .util .work--btn {
@@ -304,14 +304,16 @@ body {
   position: relative;
   text-shadow: 10px 10px 10px var(--color-darkGreen);
 }
+.main__visual .inner div h2 > div {
+  height: 130px;
+}
 .main__visual .inner div h2 strong {
-  display: block;
+  display: inline-block;
   animation-name: cursor;
   animation-duration: 0.3s;
   animation-iteration-count: infinite;
   color: var(--color-yellow);
   font-style: normal;
-  height: 130px;
 }
 .main__visual .inner .typing-txt {
   display: none;

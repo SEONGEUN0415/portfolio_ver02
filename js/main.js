@@ -208,11 +208,9 @@ $(function () {
     //graphic design animation
     let designImgs = $('.design .list ul li img');
 
-   /*  $(window).scroll(function(){
-        let scrollBar = $(window).scrollTop();
-        console.log(designImgs.offset().top)
-    }) */
-       
+   
+
+    
         
 
     
