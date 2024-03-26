@@ -10,7 +10,7 @@ $(function () {
         ], */
         anchors: ["home", "skill", "about", "WORK", "contact"],
         navigation: true,
-        navigationTooltips: ["HOME", "SKILL", "ABOUT", "WORK", "contact"],
+        navigationTooltips: ["HOME", "SKILL", "ABOUT", "WORK", "CONTACT"],
         showActiveTooltip: true,
         menu: "#menu",
     });
@@ -80,9 +80,6 @@ $(function () {
             y1 = clientY;
         }
     });
-
-    //effect02
-
 
     //mainvisual typing
 
@@ -207,4 +204,7 @@ $(function () {
             designList[i].classList.add("on");
         });
     }
+
+    //graphic design animation
+    
 });
