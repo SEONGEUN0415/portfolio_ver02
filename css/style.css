@@ -109,6 +109,15 @@ body {
   font-family: "Avenir Roman";
 }
 
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip {
+  height: 20px;
+  line-height: 20px;
+}
+
+#fp-nav ul li, .fp-slidesNav ul li {
+  height: 20px;
+}
+
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background-color: var(--color-lightGreen);
@@ -674,18 +683,28 @@ body {
   color: #fff;
   background-color: var(--color-darkGreen);
 }
-.work .inner .design h4 {
-  margin-left: 109px;
-  font-size: 3rem;
-  font-family: "Avenir Roman";
+
+/* work end */
+.work02 .inner {
+  background-color: rgba(121, 121, 121, 0.1764705882);
+  z-index: 111;
+  border-radius: 10px;
+  padding: 135px 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  box-shadow: 10px 20px 20px 10px rgba(51, 51, 51, 0.568627451);
 }
-.work .inner .design > ul {
+.work02 .inner h3 {
+  margin-bottom: 13.5rem;
+  color: var(--color-white);
+}
+.work02 .inner > ul {
   display: flex;
   gap: 5px;
   margin: 5.2rem 10.9rem 7rem;
   position: relative;
 }
-.work .inner .design > ul::after {
+.work02 .inner > ul::after {
   content: "";
   width: 100%;
   height: 3px;
@@ -695,7 +714,7 @@ body {
   bottom: 0;
   left: 0;
 }
-.work .inner .design > ul li button {
+.work02 .inner > ul li button {
   background-color: var(--color-yellow);
   border-radius: 10px;
   width: 156px;
@@ -703,16 +722,16 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
-.work .inner .design .list {
+.work02 .inner .list {
   display: none;
   justify-content: center;
   margin: 0 109px;
   gap: 12px;
 }
-.work .inner .design .list.on {
+.work02 .inner .list.on {
   display: flex;
 }
-.work .inner .design .list ul {
+.work02 .inner .list ul {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -720,17 +739,17 @@ body {
   justify-content: center;
   align-items: center;
 }
-.work .inner .design .list ul li {
+.work02 .inner .list ul li {
   width: 100%;
   animation: float 4s ease-in-out infinite;
   overflow: hidden;
 }
-.work .inner .design .list ul li img.active {
+.work02 .inner .list ul li img.active {
   position: relative;
   left: 0;
   opacity: 1;
 }
-.work .inner .design .list ul li img {
+.work02 .inner .list ul li img {
   /* width: 41.38%; */
   width: 100%;
   opacity: 0;
@@ -738,16 +757,16 @@ body {
   position: relative;
   transition: left 2s;
 }
-.work .inner .design .list:last-child {
+.work02 .inner .list:last-child {
   justify-content: space-between;
 }
-.work .inner .design .list:last-child ul {
+.work02 .inner .list:last-child ul {
   width: 100%;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
 }
-.work .inner .design .list:last-child ul li {
+.work02 .inner .list:last-child ul li {
   overflow: hidden;
   height: 60rem;
   width: calc(50% - 20px);
@@ -756,13 +775,13 @@ body {
   position: relative;
   cursor: pointer;
 }
-.work .inner .design .list:last-child ul li:hover::after, .work .inner .design .list:last-child ul li:hover::before {
+.work02 .inner .list:last-child ul li:hover::after, .work02 .inner .list:last-child ul li:hover::before {
   display: none;
 }
-.work .inner .design .list:last-child ul li:hover img {
+.work02 .inner .list:last-child ul li:hover img {
   animation: imgSlide 6s alternate linear;
 }
-.work .inner .design .list:last-child ul li::after {
+.work02 .inner .list:last-child ul li::after {
   content: "";
   position: absolute;
   top: 0;
@@ -771,7 +790,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.work .inner .design .list:last-child ul li::before {
+.work02 .inner .list:last-child ul li::before {
   content: "";
   background: url("../img/tap-icon.png") center 100% no-repeat;
   width: 60px;
@@ -783,12 +802,12 @@ body {
   transform: translate(-50%, -50%);
   transition: all 2s ease-in-out;
 }
-.work .inner .design .list:last-child ul li img {
+.work02 .inner .list:last-child ul li img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.work .inner .design .list:last-child ul li p {
+.work02 .inner .list:last-child ul li p {
   background-color: #000;
   position: absolute;
   bottom: 40%;
@@ -797,7 +816,7 @@ body {
   text-align: center;
 }
 
-/* work end */
+/* .work02 end */
 @keyframes imgSlide {
   100% {
     transform: translateY(-100%);

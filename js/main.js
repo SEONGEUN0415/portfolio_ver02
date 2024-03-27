@@ -1,7 +1,7 @@
 $(function () {
     //fullpage
     //graphic design animation
-    let designImgs = $(".design .list ul li img");
+    let designImgs = $(".work02 .list ul li img");
 
     var myFullpage = new fullpage("#fullpage", {
         /* sectionsColor: [
@@ -11,9 +11,9 @@ $(function () {
           "whitesmoke",
           "#ccddff",
         ], */
-        anchors: ["home", "skill", "about", "WORK", "contact"],
+        anchors: ["home", "skill", "about", "work", "design", "contact"],
         navigation: true,
-        navigationTooltips: ["HOME", "SKILL", "ABOUT", "WORK", "CONTACT"],
+        navigationTooltips: ["HOME", "SKILL", "ABOUT", "WEB", "DESIGN", "CONTACT"],
         showActiveTooltip: true,
         menu: "#menu",
         onScrollOverflow: function (section, slide, position, direction) {
@@ -216,8 +216,8 @@ $(function () {
     });
 
     //graphic design tap menu
-    let designTapMenu = document.querySelectorAll(".design >ul li button");
-    let designList = document.querySelectorAll(".design .list");
+    let designTapMenu = document.querySelectorAll(".work02 ul li button");
+    let designList = document.querySelectorAll(".work02 .list");
 
     for (let i = 0; i < designTapMenu.length; i++) {
         designTapMenu[i].addEventListener("click", () => {

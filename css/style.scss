@@ -125,6 +125,13 @@ body {
 #fp-nav ul li .fp-tooltip {
     font-family: "Avenir Roman";
 }
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active+.fp-tooltip{
+    height: 20px;
+    line-height: 20px;
+}
+#fp-nav ul li, .fp-slidesNav ul li{
+    height: 20px;
+}
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     background-color: var(--color-lightGreen);
@@ -767,142 +774,152 @@ body {
                 }
             }
         } /* .list end */
-        .design {
-            h4 {
-                margin-left: 109px;
-                font-size: 3rem;
-                font-family: "Avenir Roman";
+       
+    }
+} /* work end */
+
+.work02 {
+    .inner{
+        background-color: #7979792d;
+        z-index: 111;
+        border-radius: 10px;
+        padding: 135px 0;
+        backdrop-filter: blur(5px);
+        box-shadow: 10px 20px 20px 10px #33333391;
+        h3 {
+            margin-bottom: 13.5rem;
+            color: var(--color-white);
+        }
+        > ul {
+            display: flex;
+            gap: 5px;
+            margin: 5.2rem 10.9rem 7rem;
+            position: relative;
+            &::after {
+                content: "";
+                width: 100%;
+                height: 3px;
+                border-radius: 10px;
+                background-color: var(--color-yellow);
+                position: absolute;
+                bottom: 0;
+                left: 0;
             }
-            > ul {
-                display: flex;
-                gap: 5px;
-                margin: 5.2rem 10.9rem 7rem;
-                position: relative;
-                &::after {
-                    content: "";
-                    width: 100%;
-                    height: 3px;
-                    border-radius: 10px;
+            li {
+                button {
                     background-color: var(--color-yellow);
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
+                    border-radius: 10px;
+                    width: 156px;
+                    height: 47px;
+                    font-size: 18px;
+                    font-weight: bold;
                 }
+            }
+        }
+        .list {
+            &.on {
+                display: flex;
+            }
+            display: none;
+            justify-content: center;
+            margin: 0 109px;
+            gap: 12px;
+    
+            ul {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                justify-content: center;
+                align-items: center;
+    
                 li {
-                    button {
-                        background-color: var(--color-yellow);
-                        border-radius: 10px;
-                        width: 156px;
-                        height: 47px;
-                        font-size: 18px;
-                        font-weight: bold;
+                    width: 100%;
+                    animation: float 4s ease-in-out infinite;
+                    overflow: hidden;
+                    img.active {
+                        //transform: translateY(0);
+                        position: relative;
+                        left: 0;
+                        opacity: 1;
+                    }
+                    img {
+                        /* width: 41.38%; */
+                        width: 100%;
+    
+                        opacity: 0;
+                        left: -200%;
+                        position: relative;
+                        transition: left 2s;
                     }
                 }
             }
-            .list {
-                &.on {
-                    display: flex;
-                }
-                display: none;
-                justify-content: center;
-                margin: 0 109px;
-                gap: 12px;
-
+            &:last-child {
+                justify-content: space-between;
                 ul {
-                    width: 50%;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 12px;
-                    justify-content: center;
-                    align-items: center;
-
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
                     li {
-                        width: 100%;
-                        animation: float 4s ease-in-out infinite;
                         overflow: hidden;
-                        img.active {
-                            //transform: translateY(0);
-                            position: relative;
+                        height: 60rem;
+                        width: calc(100% / 2 - 20px);
+                        border: var(--color-white) 3px solid;
+                        background-color: var(--color-white);
+                        position: relative;
+                        cursor: pointer;
+                        &:hover {
+                            &::after,
+                            &::before {
+                                display: none;
+                            }
+                        }
+                        &:hover img {
+                            animation: imgSlide 6s alternate linear;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
                             left: 0;
-                            opacity: 1;
+                            background-color: #000000c4;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &::before {
+                            content: "";
+                            background: url("../img/tap-icon.png") center
+                                100% no-repeat;
+                            width: 60px;
+                            height: 60px;
+                            z-index: 888;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+    
+                            transition: all 2s ease-in-out;
                         }
                         img {
-                            /* width: 41.38%; */
                             width: 100%;
-
-                            opacity: 0;
-                            left: -200%;
-                            position: relative;
-                            transition: left 2s;
+                            object-fit: cover;
                         }
-                    }
-                }
-                &:last-child {
-                    justify-content: space-between;
-                    ul {
-                        width: 100%;
-                        flex-direction: row;
-                        align-items: flex-start;
-                        flex-wrap: wrap;
-                        li {
-                            overflow: hidden;
-                            height: 60rem;
-                            width: calc(100% / 2 - 20px);
-                            border: var(--color-white) 3px solid;
-                            background-color: var(--color-white);
-                            position: relative;
-                            cursor: pointer;
-                            &:hover {
-                                &::after,
-                                &::before {
-                                    display: none;
-                                }
-                            }
-                            &:hover img {
-                                animation: imgSlide 6s alternate linear;
-                            }
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                background-color: #000000c4;
-                                width: 100%;
-                                height: 100%;
-                            }
-                            &::before {
-                                content: "";
-                                background: url("../img/tap-icon.png") center
-                                    100% no-repeat;
-                                width: 60px;
-                                height: 60px;
-                                z-index: 888;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-
-                                transition: all 2s ease-in-out;
-                            }
-                            img {
-                                width: 100%;
-                                object-fit: cover;
-                            }
-                            p {
-                                background-color: #000;
-                                position: absolute;
-                                bottom: 40%;
-                                left: 0;
-                                width: 100%;
-                                text-align: center;
-                            }
+                        p {
+                            background-color: #000;
+                            position: absolute;
+                            bottom: 40%;
+                            left: 0;
+                            width: 100%;
+                            text-align: center;
                         }
                     }
                 }
             }
         }
     }
-} /* work end */
+    
+}/* .work02 end */
 
 @keyframes imgSlide {
     100% {
