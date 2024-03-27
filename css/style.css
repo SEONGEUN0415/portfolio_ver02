@@ -58,6 +58,12 @@
   font-weight: 100 800;
   font-stretch: 10% 200%;
 }
+@font-face {
+  font-family: "Avenir Roman";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Avenir Roman"), url("font/avenir_roman_12.woff") format("woff");
+}
 :root {
   --font-kr: "pretendard";
   --font-en-title: "Stint Ultra Expanded";
@@ -77,12 +83,14 @@ h2 {
   color: var(--color-white);
   font-style: var(--font-en-title);
   font-size: 13rem;
+  font-weight: bold;
 }
 
 h3 {
-  font-family: var(--font-en-title);
   font-size: 8rem;
   text-align: center;
+  font-family: "Avenir Roman";
+  font-weight: bold;
 }
 
 section {
@@ -92,10 +100,15 @@ section {
 body {
   background: url("../img/main-bg02.png") center/cover no-repeat fixed;
   word-break: keep-all;
+  font-family: "Avenir Roman";
 }
 
 /* fullpage */
 /* nav */
+#fp-nav ul li .fp-tooltip {
+  font-family: "Avenir Roman";
+}
+
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background-color: var(--color-lightGreen);
@@ -295,7 +308,7 @@ body {
 /* ------- */
 .main__visual {
   position: relative;
-  font-family: "Stint Ultra Expanded";
+  font-family: var(--font-en-title);
   background: url("../img/mainv-bg.png") center center/cover no-repeat;
 }
 .main__visual .fp-overflow {
@@ -314,6 +327,7 @@ body {
 .main__visual .inner div h2 {
   position: relative;
   text-shadow: 10px 10px 10px var(--color-darkGreen);
+  line-height: 1.3;
 }
 .main__visual .inner div h2 > div {
   height: 130px;
@@ -426,6 +440,7 @@ body {
 .about {
   position: relative;
   color: var(--color-white);
+  font-family: "Avenir Roman";
   /* .list end */
 }
 .about .list {
@@ -553,6 +568,7 @@ body {
 .work {
   color: #fff;
   padding-top: 0;
+  font-family: "Avenir Roman";
 }
 .work .inner {
   background-color: rgba(121, 121, 121, 0.1764705882);
@@ -565,7 +581,6 @@ body {
   /* .list end */
 }
 .work .inner h3 {
-  font-weight: bold;
   margin-bottom: 13.5rem;
 }
 .work .inner .list .item {
@@ -590,8 +605,11 @@ body {
   width: 50%;
   position: relative;
 }
-.work .inner .list .item__visual .mock-up figure {
-  position: relative;
+.work .inner .list .item__visual .mock-up figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .work .inner .list .item__visual .mock-up figure:nth-child(2) {
   position: absolute;
@@ -609,12 +627,8 @@ body {
 .work .inner .list .item__visual--btn {
   margin-left: 100px;
 }
-.work .inner .list .item__visual--btn p {
-  font-size: 16px;
-  margin-bottom: 50px;
-}
 .work .inner .list .item__visual--btn button {
-  width: 100%;
+  width: 180px;
   height: 60px;
   border-radius: 10px;
   font-size: 18px;
@@ -663,7 +677,7 @@ body {
 .work .inner .design h4 {
   margin-left: 109px;
   font-size: 3rem;
-  font-family: var(--font-en-title);
+  font-family: "Avenir Roman";
 }
 .work .inner .design > ul {
   display: flex;
@@ -705,11 +719,6 @@ body {
   gap: 12px;
   justify-content: center;
   align-items: center;
-  /* &.float-animation {
-      li {
-          animation: float 4s ease-in-out infinite;
-      }
-  } */
 }
 .work .inner .design .list ul li {
   width: 100%;
@@ -744,14 +753,48 @@ body {
   width: calc(50% - 20px);
   border: var(--color-white) 3px solid;
   background-color: var(--color-white);
+  position: relative;
+  cursor: pointer;
+}
+.work .inner .design .list:last-child ul li:hover::after, .work .inner .design .list:last-child ul li:hover::before {
+  display: none;
+}
+.work .inner .design .list:last-child ul li:hover img {
+  animation: imgSlide 6s alternate linear;
+}
+.work .inner .design .list:last-child ul li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.768627451);
+  width: 100%;
+  height: 100%;
+}
+.work .inner .design .list:last-child ul li::before {
+  content: "";
+  background: url("../img/tap-icon.png") center 100% no-repeat;
+  width: 60px;
+  height: 60px;
+  z-index: 888;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 2s ease-in-out;
 }
 .work .inner .design .list:last-child ul li img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.work .inner .design .list:last-child ul li img:hover {
-  animation: imgSlide 6s alternate linear;
+.work .inner .design .list:last-child ul li p {
+  background-color: #000;
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 /* work end */
@@ -761,25 +804,16 @@ body {
   }
 }
 /* contact */
-@font-face {
-  font-family: "GT-Flexa";
-  src: url("https://assets.codepen.io/61488/GT-Flexa-VF-Trial.woff2");
-  font-style: normal italic;
-  font-weight: 100 800;
-  font-stretch: 10% 200%;
-}
 .contact {
   color: var(--color-white);
 }
 .contact div h3 {
-  margin: 20px 0 0;
+  margin: 30px 0;
   font-family: "GT-Flexa";
   font-size: 10rem;
   font-weight: 600;
   font-stretch: 180%;
   letter-spacing: 0vw;
-  -webkit-text-stroke: 2px var(--color-darkGreen);
-  text-shadow: 0 0.05em 0 var(--color-darkGreen), 0 0.4em 0.3em rgba(70, 0, 35, 0.1);
   /* animation: contactAnimate 2s infinite; */
 }
 .contact div .contact__sns--icon {
@@ -797,12 +831,16 @@ body {
 .contact div .contact__sns--icon li img {
   width: 6rem;
   height: 6rem;
+  box-shadow: 0 0.05em 0 var(--color-darkGreen), 10px 10px 10px rgba(70, 0, 35, 0.1);
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid white;
 }
 .contact div address {
   margin: 20px 0;
   text-align: center;
   font-size: 5rem;
-  -webkit-text-stroke: 2px var(--color-darkGreen);
+  /* -webkit-text-stroke: 2px var(--color-darkGreen); */
   font-style: normal;
 }
 .contact div address p {
