@@ -50,6 +50,14 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "GT-Flexa";
+  src: url("https://assets.codepen.io/61488/GT-Flexa-VF-Trial.woff2");
+  font-display: block;
+  font-style: normal italic;
+  font-weight: 100 800;
+  font-stretch: 10% 200%;
+}
 :root {
   --font-kr: "pretendard";
   --font-en-title: "Stint Ultra Expanded";
@@ -60,6 +68,9 @@
   --color-white: #fff;
   --color-darkGreen: #3c4a3e;
   --color-lightGreen: #d6fadc;
+  --fw: 600;
+  --fs: 150;
+  --fontSize: 15;
 }
 
 h2 {
@@ -703,18 +714,20 @@ body {
 .work .inner .design .list ul li {
   width: 100%;
   animation: float 4s ease-in-out infinite;
+  overflow: hidden;
+}
+.work .inner .design .list ul li img.active {
+  position: relative;
+  left: 0;
+  opacity: 1;
 }
 .work .inner .design .list ul li img {
   /* width: 41.38%; */
   width: 100%;
-  /*  transform: translateY(-100px);
-  transition: transform 2s ease-in-out; */
-  /*  left: -130%;
+  opacity: 0;
+  left: -200%;
   position: relative;
-  transition: all 600ms ease; */
-}
-.work .inner .design .list ul li img.active {
-  left: 0;
+  transition: left 2s;
 }
 .work .inner .design .list:last-child {
   justify-content: space-between;
@@ -741,8 +754,80 @@ body {
   animation: imgSlide 6s alternate linear;
 }
 
+/* work end */
 @keyframes imgSlide {
   100% {
     transform: translateY(-100%);
+  }
+}
+/* contact */
+@font-face {
+  font-family: "GT-Flexa";
+  src: url("https://assets.codepen.io/61488/GT-Flexa-VF-Trial.woff2");
+  font-style: normal italic;
+  font-weight: 100 800;
+  font-stretch: 10% 200%;
+}
+.contact {
+  color: var(--color-white);
+}
+.contact div h3 {
+  margin: 20px 0 0;
+  font-family: "GT-Flexa";
+  font-size: 10rem;
+  font-weight: 600;
+  font-stretch: 180%;
+  letter-spacing: 0vw;
+  -webkit-text-stroke: 2px var(--color-darkGreen);
+  text-shadow: 0 0.05em 0 var(--color-darkGreen), 0 0.4em 0.3em rgba(70, 0, 35, 0.1);
+  /* animation: contactAnimate 2s infinite; */
+}
+.contact div .contact__sns--icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+.contact div .contact__sns--icon li {
+  /*  background-color: var(--color-darkGreen);
+  border-radius: 50%;
+  padding: 10px; */
+  animation: contactAnimate 2s infinite;
+}
+.contact div .contact__sns--icon li img {
+  width: 6rem;
+  height: 6rem;
+}
+.contact div address {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 5rem;
+  -webkit-text-stroke: 2px var(--color-darkGreen);
+  font-style: normal;
+}
+.contact div address p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact div address p a img {
+  height: 100%;
+}
+.contact .copyRight {
+  padding: 3rem;
+  text-align: center;
+  color: var(--color-darkGreen);
+  font-size: 12px;
+}
+
+@keyframes contactAnimate {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
   }
 }/*# sourceMappingURL=style.css.map */

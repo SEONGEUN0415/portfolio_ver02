@@ -1,5 +1,8 @@
 $(function () {
     //fullpage
+    //graphic design animation
+    let designImgs = $(".design .list ul li img");
+
     var myFullpage = new fullpage("#fullpage", {
         /* sectionsColor: [
           "#1bbc9b",
@@ -13,6 +16,26 @@ $(function () {
         navigationTooltips: ["HOME", "SKILL", "ABOUT", "WORK", "CONTACT"],
         showActiveTooltip: true,
         menu: "#menu",
+        onScrollOverflow: function (section, slide, position, direction) {
+            /*  if (designImgTop - 1500 <= position ) {
+                //alert("Section 3 ended loading");
+                $(designImgs).addClass('active');
+            } else{
+                $(designImgs).removeClass('active');
+            } */
+
+            designImgs.each(function (item, index) {
+                //index가 각 이미지
+                let designImgTop = $(index).offset().top;
+
+                /*     console.log(designImgTop); */
+                if (designImgTop <= position) {
+                    $(index).addClass("active");
+                } /* else{
+                    $(index).removeClass("active");
+                } */
+            });
+        },
     });
 
     //cursor effect
@@ -205,13 +228,6 @@ $(function () {
         });
     }
 
-    //graphic design animation
-    let designImgs = $('.design .list ul li img');
-
-   
-
-    
-        
-
-    
+    //contact
+ 
 });
