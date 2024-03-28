@@ -674,6 +674,7 @@ body {
 }
 .work .inner .list .item__info p {
   font-size: 16px;
+  line-height: 1.5;
 }
 .work .inner .list .item__info__tool ul {
   display: flex;
