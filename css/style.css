@@ -229,8 +229,8 @@ body {
 .util .work--btn {
   height: 125px;
 }
-.util .resume--btn #container,
-.util .work--btn #container {
+.util .resume--btn .container,
+.util .work--btn .container {
   margin: 0%;
   /*  display: flex;
   justify-content: center;
@@ -240,12 +240,12 @@ body {
   position: relative;
   transition: transform 1s ease-in-out;
 }
-.util .resume--btn #container:hover,
-.util .work--btn #container:hover {
+.util .resume--btn .container:hover,
+.util .work--btn .container:hover {
   transform: scale(1.3);
 }
-.util .resume--btn #container img,
-.util .work--btn #container img {
+.util .resume--btn .container img,
+.util .work--btn .container img {
   width: 25%;
   height: 32%;
   position: absolute;
@@ -285,7 +285,7 @@ body {
     transform: rotate(0);
   }
 }
-.util .work--btn #container img {
+.util .work--btn .container img {
   width: 30%;
   height: 30%;
 }
