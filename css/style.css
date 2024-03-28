@@ -188,6 +188,7 @@ body {
 }
 .language--btn .toggleSwitch .toggleButton {
   /* 버튼은 토글보다 작아야함  */
+  color: transparent;
   width: 40px;
   height: 40px;
   position: absolute;

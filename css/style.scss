@@ -201,6 +201,7 @@ body {
         border: var(--color-darkGreen) 2px solid;
         .toggleButton {
             /* 버튼은 토글보다 작아야함  */
+            color: transparent;
             width: 40px;
             height: 40px;
             position: absolute;
