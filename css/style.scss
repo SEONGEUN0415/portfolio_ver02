@@ -707,7 +707,7 @@ body {
                             }
                             &:nth-child(2) {
                                 position: absolute;
-                                top: 50%;
+                                top: 40%;
                                 left: -10%;
                                 width: 478px;
                                 height: 334px;
@@ -730,6 +730,11 @@ body {
                             margin-top: 10px;
                             font-weight: bold;
                             background-color: var(--color-yellow);
+                            a{
+                                display: block;
+                                height: 100%;
+                                line-height: 60px;
+                            }
                             &:nth-child(3) {
                                 background-color: var(--color-beige);
                             }
@@ -741,7 +746,7 @@ body {
                     justify-content: space-between;
                     gap: 5rem;
                     border-radius: 20px;
-                    margin: 0 auto;
+                    margin: 10rem auto;
                     width: 60%;
                     > div {
                         display: flex;
