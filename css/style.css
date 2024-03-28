@@ -522,14 +522,9 @@ body {
   top: 20%;
   left: 55%;
 }
-.about .ml8 .letters-container {
+.about h1.ml8 i {
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  height: 1em;
+  left: -9999px;
 }
 .about .ml8 .circle {
   position: absolute;

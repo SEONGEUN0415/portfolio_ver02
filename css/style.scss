@@ -604,16 +604,10 @@ body {
         position: absolute;
         top: 20%;
         left: 55%;
-    }
-
-    .ml8 .letters-container {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-        height: 1em;
+        i{
+            position: absolute;
+            left: -9999px;
+        }
     }
 
     .ml8 .circle {
@@ -646,6 +640,7 @@ body {
         border: 2px dashed var(--color-lightGreen);
         width: 50rem;
         height: 50rem;
+        
     }
 
     figure {
