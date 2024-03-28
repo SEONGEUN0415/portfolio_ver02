@@ -109,12 +109,14 @@ body {
   font-family: "Avenir Roman";
 }
 
-#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip {
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
   height: 20px;
   line-height: 20px;
 }
 
-#fp-nav ul li, .fp-slidesNav ul li {
+#fp-nav ul li,
+.fp-slidesNav ul li {
   height: 20px;
 }
 
@@ -632,7 +634,10 @@ body {
 .work .inner .list .item__visual--btn {
   margin-left: 100px;
 }
-.work .inner .list .item__visual--btn button {
+.work .inner .list .item__visual--btn a {
+  display: block;
+  height: 100%;
+  line-height: 60px;
   width: 180px;
   height: 60px;
   border-radius: 10px;
@@ -640,14 +645,11 @@ body {
   display: block;
   margin-top: 10px;
   font-weight: bold;
+  color: #333;
+  text-align: center;
   background-color: var(--color-yellow);
 }
-.work .inner .list .item__visual--btn button a {
-  display: block;
-  height: 100%;
-  line-height: 60px;
-}
-.work .inner .list .item__visual--btn button:nth-child(3) {
+.work .inner .list .item__visual--btn:nth-child(3) {
   background-color: var(--color-beige);
 }
 .work .inner .list .item__info {

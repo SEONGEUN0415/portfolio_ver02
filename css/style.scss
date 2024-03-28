@@ -125,11 +125,13 @@ body {
 #fp-nav ul li .fp-tooltip {
     font-family: "Avenir Roman";
 }
-#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active+.fp-tooltip{
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
     height: 20px;
     line-height: 20px;
 }
-#fp-nav ul li, .fp-slidesNav ul li{
+#fp-nav ul li,
+.fp-slidesNav ul li {
     height: 20px;
 }
 #fp-nav ul li a span,
@@ -604,7 +606,7 @@ body {
         position: absolute;
         top: 20%;
         left: 55%;
-        i{
+        i {
             position: absolute;
             left: -9999px;
         }
@@ -640,7 +642,6 @@ body {
         border: 2px dashed var(--color-lightGreen);
         width: 50rem;
         height: 50rem;
-        
     }
 
     figure {
@@ -717,7 +718,11 @@ body {
                     } /* .mock-up end */
                     &--btn {
                         margin-left: 100px;
-                        button {
+
+                        a {
+                            display: block;
+                            height: 100%;
+                            line-height: 60px;
                             width: 180px;
                             height: 60px;
                             border-radius: 10px;
@@ -725,15 +730,12 @@ body {
                             display: block;
                             margin-top: 10px;
                             font-weight: bold;
+                            color: #333;
+                            text-align: center;
                             background-color: var(--color-yellow);
-                            a{
-                                display: block;
-                                height: 100%;
-                                line-height: 60px;
-                            }
-                            &:nth-child(3) {
-                                background-color: var(--color-beige);
-                            }
+                        }
+                        &:nth-child(3) {
+                            background-color: var(--color-beige);
                         }
                     }
                 }
@@ -776,12 +778,11 @@ body {
                 }
             }
         } /* .list end */
-       
     }
 } /* work end */
 
 .work02 {
-    .inner{
+    .inner {
         background-color: #7979792d;
         z-index: 111;
         border-radius: 10px;
@@ -826,7 +827,7 @@ body {
             justify-content: center;
             margin: 0 109px;
             gap: 12px;
-    
+
             ul {
                 width: 50%;
                 display: flex;
@@ -834,7 +835,7 @@ body {
                 gap: 12px;
                 justify-content: center;
                 align-items: center;
-    
+
                 li {
                     width: 100%;
                     animation: float 4s ease-in-out infinite;
@@ -848,7 +849,7 @@ body {
                     img {
                         /* width: 41.38%; */
                         width: 100%;
-    
+
                         opacity: 0;
                         left: -200%;
                         position: relative;
@@ -891,8 +892,8 @@ body {
                         }
                         &::before {
                             content: "";
-                            background: url("../img/tap-icon.png") center
-                                100% no-repeat;
+                            background: url("../img/tap-icon.png") center 100%
+                                no-repeat;
                             width: 60px;
                             height: 60px;
                             z-index: 888;
@@ -900,7 +901,7 @@ body {
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-    
+
                             transition: all 2s ease-in-out;
                         }
                         img {
@@ -920,8 +921,7 @@ body {
             }
         }
     }
-    
-}/* .work02 end */
+} /* .work02 end */
 
 @keyframes imgSlide {
     100% {
