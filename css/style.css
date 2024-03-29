@@ -344,7 +344,8 @@ body.on::before {
 }
 .util .resume--btn,
 .util .work--btn {
-  height: 125px;
+  height: 135px;
+  cursor: pointer;
 }
 .util .resume--btn .container,
 .util .work--btn .container {
