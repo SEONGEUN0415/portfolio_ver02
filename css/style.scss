@@ -118,8 +118,19 @@ body {
     background: url("../img/main-bg02.png") center / cover no-repeat fixed;
     word-break: keep-all;
     font-family: "Avenir Roman";
+    &.on {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #000000ce;
+            width: 100%;
+            height: 100%;
+            z-index: 8888;
+        }
+    }
 }
-
 
 /* fullpage */
 /* nav */
@@ -145,37 +156,116 @@ body {
     max-width: 1440px;
 }
 
-.popUp{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: 55555;
-    &::before{
-        content: '';
-        position: absolute;
-        top:0;
-        left: 0;
-        background-color: #000000f5;
-        width: 100%;
-        height: 100%;
-    }
-    > div{
-        color: var(--color-white);
-        z-index: 99999;
+.modal {
+    display: none;
+    &.on {
+        display: block;
+        position: fixed;
+        top: -50%;
+        left: 50%;
+        z-index: 55555;
+        padding: 100px;
         text-align: center;
-        figure{
-        width: 20.83%;
-        img{
+        transform: translate(-50%, -50%);
+        font-family: var(--font-kr);
+        background-color: #3e59b0;
+        border-radius: 100px;
+
+        .cancel--icon {
+            position: fixed;
+            top: -100px;
+            right: 0;
+            background: url("../img/cancel-icon.png") center / 100% no-repeat;
+            width: 6rem;
+            height: 6rem;
+            z-index: 8888;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1.4);
+            }
+        }
+        div {
+            p {
+                font-size: 20px;
+                color: #fff;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            align-items: center;
+            button {
+                background-color: #fff;
+                width: 30rem;
+                height: 6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50px;
+                padding: 10px;
+                gap: 20px;
+                font-weight: bold;
+                font-size: 18px;
+                position: relative;
+                &::after {
+                    content: "";
+                    background: url("../img/check-icon.png") center / 100%
+                        no-repeat;
+                    width: 5.4rem;
+                    height: 5.4rem;
+                    position: absolute;
+                    top: 50%;
+                    right: -5%;
+                    transform: translateY(-50%);
+                    transition: transform 0.3s ease-in-out;
+                }
+                &:hover {
+                    &::after {
+                        transform: translateY(-50%) rotate(20deg) scale(1.1);
+                    }
+                }
+                img {
+                    width: 5.4rem;
+                    height: 5.4rem;
+                }
+            }
+            span {
+                margin-top: 15px;
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+        .modal__01,
+        .modal__02 {
+            /* &.on{
+                display: block;
+            } */
+            /* display: none; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            figure {
+                width: 0;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+            }
+        }
+        .modal__02 {
+            figure {
+                img {
+                    width: 70%;
+                    height: 70%;
+                }
+            }
         }
     }
-    }
-    
-    
 }
 
 /* header */

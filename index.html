@@ -16,16 +16,37 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
         <script src="js/main.js"></script>
     </head>
-    <body>
-        <!-- <div class="popUp">
-            
-            <div>
-                <figure>
-                    <img src="img/accessibility-mockup.png" alt="accessibility-mockup">
-                </figure>
-                <div>접근성검사 완료</div>
+    <body class="on">
+        <div class="modal on">
+            <div class="cancel--icon">
+                <img src="img/cancel-icon.png" alt="cancel--icon">
             </div>
-        </div> --><!-- .popup end -->
+            <div>
+                <p>이 포트폴리오는</p>
+                <button>
+                    접근성검사 <!-- <img src="img/check-icon.png" alt="img/check-icon" /> -->
+                </button>
+                <button>반응형<!--  <img src="img/check-icon.png" alt="img/check-icon" /> --></button>
+                <span>클릭해보세요!</span>
+            </div>
+            <div class="modal__01 modal--img">
+                <figure>
+                    <img
+                        src="img/accessibility-mockup.png"
+                        alt="accessibility-mockup"
+                    />
+                </figure>
+            </div><!-- .modal01 end -->
+            <div class="modal__02 modal--img">
+                <figure>
+                    <img
+                        src="img/qrcode.png"
+                        alt="qrcode"
+                    />
+                </figure>
+            </div><!-- modal02 end -->
+        </div>
+        <!-- .modal end -->
         <header class="header" id="header">
             <!--  <nav class="menu__pc">
                 <ul class="gnb">

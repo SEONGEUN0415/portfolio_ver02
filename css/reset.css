@@ -16,6 +16,7 @@ button{
     background-color: transparent;
     border: 0;
     cursor: pointer;
+    color: inherit;
 }
 html, body{
     font-size: 62.5%;

@@ -13,7 +13,14 @@ $(function () {
         ], */
         anchors: ["home", "skill", "about", "work", "design", "contact"],
         navigation: true,
-        navigationTooltips: ["HOME", "SKILL", "ABOUT", "WEB", "DESIGN", "CONTACT"],
+        navigationTooltips: [
+            "HOME",
+            "SKILL",
+            "ABOUT",
+            "WEB",
+            "DESIGN",
+            "CONTACT",
+        ],
         showActiveTooltip: true,
         menu: "#menu",
         onScrollOverflow: function (section, slide, position, direction) {
@@ -37,6 +44,39 @@ $(function () {
             });
         },
     });
+
+    //modal
+    let modal = $(".modal");
+    let cancelModalBtn = $('.modal .cancel--icon');
+    
+    cancelModalBtn.click(function(){
+        $('body').removeClass('on');
+        modal.removeClass('on');
+    })
+
+    //modal coming out
+    modal.animate(
+        {
+            top: "50%",
+        },
+        700,
+        "swing"
+    );
+    
+    let modalBtn = $(".modal button");
+    let modalImg = $(".modal--img");
+    
+    //click button
+    for (let i = 0; i < modalBtn.length; i++) {
+        modalBtn[i].addEventListener("click", () => {
+            modalImg.eq(i).find("figure").animate({ width: "70%" }, 1000, "swing");
+        });
+        modalImg[i].addEventListener("click", () => {
+            modalImg.find("figure").animate({ width: "0" }, 1000, "swing");
+        });
+    }
+    //modal end
+
 
     //cursor effect
     let x1 = 0,
@@ -229,5 +269,4 @@ $(function () {
     }
 
     //contact
- 
 });
