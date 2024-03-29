@@ -349,8 +349,8 @@ body.on::before {
 .util .resume--btn .container,
 .util .work--btn .container {
   margin: 0%;
-  height: 20rem;
-  width: 20rem;
+  height: 200px;
+  width: 200px;
   position: relative;
   transition: transform 1s ease-in-out;
 }
@@ -1068,15 +1068,6 @@ body.on::before {
   }
 } /* 650 */
 @media screen and (max-width: 540px) {
-  .util .resume--btn,
-  .util .work--btn {
-    height: 70px;
-  }
-  .util .resume--btn .container,
-  .util .work--btn .container {
-    width: 15rem;
-    height: 15rem;
-  }
   .main__visual .inner div .container {
     left: 50%;
     top: -120%;

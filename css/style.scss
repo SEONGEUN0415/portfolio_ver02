@@ -207,7 +207,7 @@ body {
                 font-weight: bold;
                 font-size: 18px;
                 position: relative;
-                
+
                 &::after {
                     content: "";
                     background: url("../img/check-icon.png") center / 100%
@@ -373,8 +373,8 @@ body {
         cursor: pointer;
         .container {
             margin: 0%;
-            height: 20rem;
-            width: 20rem;
+            height: 200px;
+            width: 200px;
             position: relative;
             transition: transform 1s ease-in-out;
             &:hover {
@@ -1130,7 +1130,7 @@ body {
         top: 50px;
         left: 0;
     }
-    .util{
+    .util {
         left: -10px;
     }
     .main__visual {
@@ -1198,17 +1198,6 @@ body {
     }
 } /* 650 */
 @media screen and (max-width: 540px) {
-    .util {
-        
-        .resume--btn,
-        .work--btn {
-            height: 70px;
-            .container{
-                width: 15rem;
-                height: 15rem;
-            }
-        }
-    }
     .main__visual {
         .inner {
             div {
@@ -1216,7 +1205,6 @@ body {
                     left: 50%;
                     top: -120%;
                     transform: translateX(-50%);
-                   
 
                     .avatar {
                         width: 100%;
@@ -1236,16 +1224,16 @@ body {
     body {
         font-size: 37.5%;
     }
-    .modal{
-        &.on{
-            div{
-                p{
+    .modal {
+        &.on {
+            div {
+                p {
                     font-size: 16px;
                 }
-                button{
+                button {
                     font-size: 14px;
                 }
-                span{
+                span {
                     font-size: 12px;
                 }
             }
