@@ -24,19 +24,12 @@ $(function () {
         showActiveTooltip: true,
         menu: "#menu",
         onScrollOverflow: function (section, slide, position, direction) {
-            /*  if (designImgTop - 1500 <= position ) {
-                //alert("Section 3 ended loading");
-                $(designImgs).addClass('active');
-            } else{
-                $(designImgs).removeClass('active');
-            } */
-
             designImgs.each(function (item, index) {
                 //index가 각 이미지
                 let designImgTop = $(index).offset().top;
 
                 /*     console.log(designImgTop); */
-                if (designImgTop <= position) {
+                if (designImgTop - 2500 <= position) {
                     $(index).addClass("active");
                 } /* else{
                     $(index).removeClass("active");
@@ -47,12 +40,12 @@ $(function () {
 
     //modal
     let modal = $(".modal");
-    let cancelModalBtn = $('.modal .cancel--icon');
-    
-    cancelModalBtn.click(function(){
-        $('body').removeClass('on');
-        modal.removeClass('on');
-    })
+    let cancelModalBtn = $(".modal .cancel--icon");
+
+    cancelModalBtn.click(function () {
+        $("body").removeClass("on");
+        modal.removeClass("on");
+    });
 
     //modal coming out
     modal.animate(
@@ -62,21 +55,23 @@ $(function () {
         700,
         "swing"
     );
-    
+
     let modalBtn = $(".modal button");
     let modalImg = $(".modal--img");
-    
+
     //click button
     for (let i = 0; i < modalBtn.length; i++) {
         modalBtn[i].addEventListener("click", () => {
-            modalImg.eq(i).find("figure").animate({ width: "70%" }, 1000, "swing");
+            modalImg
+                .eq(i)
+                .find("figure")
+                .animate({ width: "70%" }, 1000, "swing");
         });
         modalImg[i].addEventListener("click", () => {
             modalImg.find("figure").animate({ width: "0" }, 1000, "swing");
         });
     }
     //modal end
-
 
     //cursor effect
     let x1 = 0,

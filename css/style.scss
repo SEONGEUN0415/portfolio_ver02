@@ -151,9 +151,9 @@ body {
     background-color: var(--color-lightGreen);
 }
 .inner {
-    width: calc(100% - 40px);
+    width: calc(100% - 100px);
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1280px;
 }
 
 .modal {
@@ -175,13 +175,12 @@ body {
             position: fixed;
             top: -100px;
             right: 0;
-            background: url("../img/cancel-icon.png") center / 100% no-repeat;
             width: 6rem;
             height: 6rem;
             z-index: 8888;
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
-            &:hover{
+            &:hover {
                 transform: scale(1.4);
             }
         }
@@ -314,8 +313,8 @@ body {
     transform: rotate(-90deg);
     /* display: none; */
     .toggleSwitch {
-        width: 100px;
-        height: 50px;
+        width: 10rem;
+        height: 5rem;
         display: block;
         top: 0;
         left: 0;
@@ -328,8 +327,8 @@ body {
         .toggleButton {
             /* 버튼은 토글보다 작아야함  */
             color: transparent;
-            width: 40px;
-            height: 40px;
+            width: 4rem;
+            height: 4rem;
             position: absolute;
             top: 50%;
             left: 4px;
@@ -345,7 +344,7 @@ body {
     }
 
     #toggle:checked ~ .toggleSwitch .toggleButton {
-        left: calc(100% - 44px);
+        left: calc(100% - 4.4rem);
         background: url(../img/flag-british.png) center / 100% no-repeat;
     }
 
@@ -373,11 +372,8 @@ body {
         cursor: pointer;
         .container {
             margin: 0%;
-            /*  display: flex;
-            justify-content: center;
-            align-items: center; */
-            height: 200px;
-            width: 200px;
+            height: 20rem;
+            width: 20rem;
             position: relative;
             transition: transform 1s ease-in-out;
             &:hover {
@@ -526,8 +522,8 @@ body {
             position: relative;
             .container {
                 position: absolute;
-                top: 4%;
-                right: 0;
+                top: 0;
+                right: 5%;
             }
             h2 {
                 position: relative;
@@ -587,10 +583,9 @@ body {
     }
 }
 .avatar {
-    width: 250px;
-    height: 250px;
+    width: 25rem;
+    height: 25rem;
     box-sizing: border-box;
-
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
@@ -772,7 +767,6 @@ body {
         order: 0;
         /* width: 264px; */
         width: 56.33%;
-        height: 500px;
         margin-left: 150px;
         margin-top: 50px;
         /* background-color: var(--color-beige); */
@@ -1114,6 +1108,7 @@ body {
         font-size: 12px;
     }
 }
+/* .contact end */
 @keyframes contactAnimate {
     0% {
         transform: translatey(0px);
@@ -1123,5 +1118,135 @@ body {
     }
     100% {
         transform: translatey(0px);
+    }
+}
+
+/* 50, 43.75, 37.50, 31.25 */
+/* mediaquery */
+
+@media screen and (max-width: 1280px) {
+    .language--btn {
+        top: 8rem;
+        left: 3rem;
+    }
+    .main__visual {
+        .inner {
+            div {
+                h2 {
+                    > div {
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1230px) {
+    html,
+    body {
+        font-size: 56.25%;
+    }
+    h2 {
+        font-size: 11rem;
+    }
+} /* 1230 */
+
+@media screen and (max-width: 1060px) {
+    h2 {
+        font-size: 10rem;
+    }
+    .avatar {
+        width: 20rem;
+        height: 20rem;
+    }
+} /* 1060 */
+
+@media screen and (max-width: 970px) {
+    html,
+    body {
+        font-size: 50%;
+    }
+} /* 970 */
+
+@media screen and (max-width: 880px) {
+    .util {
+        top: 80%;
+        .resume--btn,
+        .work--btn {
+            height: 90px;
+        }
+    }
+    h2 {
+        font-size: 8rem;
+    }
+} /* 880 */
+
+@media screen and (max-width: 680px) {
+    h2 {
+        font-size: 6.5rem;
+    }
+} /* 680 */
+
+@media screen and (max-width: 650px) {
+    html,
+    body {
+        font-size: 43.75%;
+    }
+} /* 650 */
+@media screen and (max-width: 540px) {
+    .main__visual {
+        .inner {
+            div {
+                .container {
+                    left: 50%;
+                    top: -120%;
+                    transform: translateX(-50%);
+
+                    .avatar {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    h2 {
+        font-size: 5.5rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    html,
+    body {
+        font-size: 37.5%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .main__visual {
+        .inner {
+            div {
+                .container {
+                    top: -155%;
+                }
+            }
+        }
+    }
+    .avatar {
+        height: 15rem;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 340px) {
+    html,
+    body {
+        font-size: 31.25%;
+    }
+}
+@media screen and (max-width: 280px) {
+    h2 {
+        font-size: 3rem;
     }
 }
