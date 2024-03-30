@@ -250,6 +250,14 @@ $(function () {
         loop: true,
     });
 
+    //show the content of each title
+    let aboutCategory = $('.about .list .item')
+
+    aboutCategory.click(function(){
+     $(this).find('ul').css('display', 'block');
+     alert()
+    })
+
     //graphic design tap menu
     let designTapMenu = document.querySelectorAll(".work02 ul li button");
     let designList = document.querySelectorAll(".work02 .list");

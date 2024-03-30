@@ -650,19 +650,19 @@ body {
     color: var(--color-white);
     font-family: "Avenir Roman";
     .list {
-        margin-left: 5rem;
+        margin-left: 50px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         z-index: 222;
         position: relative;
-
+        gap: 3rem;
         .item {
-            margin-bottom: 3rem;
+            
             h4 {
                 color: var(--color-yellow);
                 font-size: 3rem;
-                margin-bottom: 3rem;
+                margin-bottom: 2.5rem;
                 line-height: 25px;
 
                 &::after {
@@ -678,7 +678,7 @@ body {
             ul {
                 li {
                     font-size: 20px;
-                    margin-bottom: 2rem;
+                    margin-bottom: 15px;
                     span {
                         margin-right: 20px;
                     }
@@ -1177,18 +1177,27 @@ body {
         font-size: 50%;
     }
 
-    /* skill */
+    /* about */
     .about{
         .list{
+            margin-left: 11rem;
+            width: 50%;
             .item{
+                h4{
+                    display: inline-block;
+                }
                 ul{
-                    display: none;
+                  display: none;
                     li{
                         font-size: 16px;
                     }
                 }
             }
         }
+    }
+
+    #fp-nav ul li{
+        height: 15px;
     }
 } /* 970 */
 
