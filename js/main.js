@@ -252,10 +252,16 @@ $(function () {
 
     //show the content of each title
     let aboutCategory = $('.about .list .item')
-
+    
     aboutCategory.click(function(){
-     $(this).find('ul').css('display', 'block');
-     alert()
+        aboutCategory.find('ul').slideUp();
+        if($(this).find('ul').css('display','block') = true){
+            $(this).find('ul').slideUp();
+        }else{
+            $(this).find('ul').slideDown();
+        }
+     
+   
     })
 
     //graphic design tap menu

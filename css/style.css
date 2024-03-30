@@ -597,6 +597,7 @@ body.on::before {
 .about .list .item ul li {
   font-size: 20px;
   margin-bottom: 15px;
+  line-height: 1.5;
 }
 .about .list .item ul li span {
   margin-right: 20px;
