@@ -114,7 +114,7 @@ body.on::before {
 }
 
 /* fullpage */
-/* nav */
+/* nav tooltip*/
 #fp-nav ul li .fp-tooltip {
   font-family: "Avenir Roman";
 }
@@ -128,6 +128,7 @@ body.on::before {
 #fp-nav ul li,
 .fp-slidesNav ul li {
   height: 20px;
+  margin: 0.7rem;
 }
 
 #fp-nav ul li a span,
@@ -528,7 +529,7 @@ body.on::before {
 }
 .skill .skill__des p {
   text-align: center;
-  font-size: 28px;
+  font-size: 2.8rem;
   display: none;
   margin-bottom: 13.5rem;
   line-height: 1.3;
@@ -540,17 +541,18 @@ body.on::before {
 .skill .skill__des--icon {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   -moz-column-gap: 10px;
        column-gap: 10px;
   position: relative;
-  padding-top: 60px;
+  padding-top: 6rem;
 }
 .skill .skill__des--icon li {
   cursor: pointer;
 }
 .skill .skill__des--icon li img {
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
 }
 .skill .skill__des--icon::before {
   content: "아이콘을 클릭해 보세요!";
@@ -558,7 +560,7 @@ body.on::before {
   top: 0;
   right: 50%;
   transform: translateX(50%);
-  font-size: 20px;
+  font-size: 2rem;
   font-family: var(--font-kr);
 }
 
@@ -1037,11 +1039,22 @@ body.on::before {
     width: 20rem;
     height: 20rem;
   }
+  /* about */
+  .about h1.ml8 {
+    left: 50%;
+  }
 } /* 1060 */
 @media screen and (max-width: 970px) {
   html,
   body {
     font-size: 50%;
+  }
+  /* skill */
+  .about .list .item ul {
+    display: none;
+  }
+  .about .list .item ul li {
+    font-size: 16px;
   }
 } /* 970 */
 @media screen and (max-width: 880px) {
@@ -1055,7 +1068,18 @@ body.on::before {
   h2 {
     font-size: 8rem;
   }
+  .about .list .item ul li {
+    font-size: 16px;
+  }
 } /* 880 */
+@media screen and (max-width: 740px) {
+  h2 {
+    font-size: 6.5rem;
+  }
+  .about .list .item ul li {
+    font-size: 14px;
+  }
+} /* 680 */
 @media screen and (max-width: 680px) {
   h2 {
     font-size: 6.5rem;
