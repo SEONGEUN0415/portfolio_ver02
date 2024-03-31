@@ -1174,9 +1174,6 @@ body.on::before {
     top: 0;
     right: 0;
   }
-  .about .list .item__info {
-    width: 90%;
-  }
   .about .list .item ul {
     display: none;
   }
@@ -1218,6 +1215,7 @@ body.on::before {
   .work .inner .list .item__info {
     flex-direction: column;
     text-align: center;
+    width: 90%;
   }
   .work .inner .list .item__info__tool ul {
     justify-content: center;
@@ -1340,6 +1338,7 @@ body.on::before {
   }
   .modal.on div button {
     font-size: 14px;
+    width: 70%;
   }
   .modal.on div span {
     font-size: 12px;

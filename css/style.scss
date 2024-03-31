@@ -1311,9 +1311,6 @@ body {
                     
                    
                 }
-                &__info{
-                    width: 90%;
-                }
                 ul{
                     display: none;
                     li{
@@ -1365,6 +1362,7 @@ body {
                     &__info{
                         flex-direction: column;
                         text-align: center;
+                            width: 90%;
                         &__tool{
                             ul{
                                 justify-content: center;
@@ -1567,6 +1565,7 @@ body {
                 }
                 button {
                     font-size: 14px;
+                    width: 70%;
                 }
                 span {
                     font-size: 12px;
