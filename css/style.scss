@@ -843,10 +843,10 @@ body {
                         a {
                             display: block;
                             height: 100%;
-                            line-height: 60px;
-                            width: 180px;
-                            height: 60px;
-                            border-radius: 10px;
+                            line-height: 6rem;
+                            width: 18rem;
+                            height: 6rem;
+                            border-radius: 8px;
                             font-size: 18px;
                             display: block;
                             margin-top: 10px;
@@ -1229,6 +1229,13 @@ body {
         .inner{
             .list{
                 .item{
+                    h4{
+                        margin-left: 0;
+                        text-align: center;
+                        span{
+                            margin-right: 10px;
+                        }
+                    }
                     &__visual{
                         flex-direction: column;
                         .mock-up{
@@ -1240,6 +1247,10 @@ body {
                             justify-content: center;
                             gap: 10px;
                             flex-wrap: wrap;
+                            margin-top: 4rem;
+                            a{
+                                margin-top: 0
+                            }
                         }
                     }
                     &__info{
@@ -1282,9 +1293,17 @@ body {
     }
 } /* 970 */
 
+
 @media screen and (max-width: 880px) {
     h2 {
         font-size: 8rem;
+    }
+    .work{
+        .inner{
+            h3{
+                margin-bottom: 10rem;
+            }
+        }
     }
    
 } /* 880 */
@@ -1304,12 +1323,24 @@ body {
             }
         }
     }
+    .work{
+        .inner{
+            .list{
+                .item__info{
+                    margin: 6rem auto;
+                }
+            }
+        }
+    }
 
 } /* 740 */
 
 @media screen and (max-width: 680px) {
     h2 {
         font-size: 6.5rem;
+    }
+    .work{
+
     }
     .work02{
         .inner{
@@ -1333,6 +1364,23 @@ body {
     body {
         font-size: 43.75%;
     }
+    .work{
+        .inner{
+            .list{
+                .item{
+                    &__visual{
+                        margin: 3rem auto;
+                        &--btn{
+                            a{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+
     
 } /* 650 */
 @media screen and (max-width: 540px) {

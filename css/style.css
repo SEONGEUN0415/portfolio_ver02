@@ -752,10 +752,10 @@ body.on::before {
 .work .inner .list .item__visual--btn a {
   display: block;
   height: 100%;
-  line-height: 60px;
-  width: 180px;
-  height: 60px;
-  border-radius: 10px;
+  line-height: 6rem;
+  width: 18rem;
+  height: 6rem;
+  border-radius: 8px;
   font-size: 18px;
   display: block;
   margin-top: 10px;
@@ -1086,6 +1086,13 @@ body.on::before {
     font-size: 16px;
   }
   /* about  */
+  .work .inner .list .item h4 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .work .inner .list .item h4 span {
+    margin-right: 10px;
+  }
   .work .inner .list .item__visual {
     flex-direction: column;
   }
@@ -1098,6 +1105,10 @@ body.on::before {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    margin-top: 4rem;
+  }
+  .work .inner .list .item__visual--btn a {
+    margin-top: 0;
   }
   .work .inner .list .item__info {
     flex-direction: column;
@@ -1131,6 +1142,9 @@ body.on::before {
   h2 {
     font-size: 8rem;
   }
+  .work .inner h3 {
+    margin-bottom: 10rem;
+  }
 } /* 880 */
 @media screen and (max-width: 740px) {
   h2 {
@@ -1138,6 +1152,9 @@ body.on::before {
   }
   .about .list .item ul li {
     font-size: 14px;
+  }
+  .work .inner .list .item__info {
+    margin: 6rem auto;
   }
 } /* 740 */
 @media screen and (max-width: 680px) {
@@ -1159,6 +1176,12 @@ body.on::before {
   html,
   body {
     font-size: 43.75%;
+  }
+  .work .inner .list .item__visual {
+    margin: 3rem auto;
+  }
+  .work .inner .list .item__visual--btn a {
+    font-size: 14px;
   }
 } /* 650 */
 @media screen and (max-width: 540px) {
