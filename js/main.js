@@ -250,7 +250,7 @@ $(function () {
         loop: true,
     });
 
-    //show the content of each title
+    //about show the content of each title
     let aboutCategory = $('.about .list .item')
     
     aboutCategory.click(function(){

@@ -656,7 +656,7 @@ body {
         justify-content: space-between;
         z-index: 222;
         position: relative;
-        gap: 3rem;
+        gap: 2rem;
         .item {
             
             h4 {
@@ -723,10 +723,10 @@ body {
         font-weight: 100;
         font-size: 4.5em;
         color: #fff;
-        width: 3em;
-        height: 3em;
+        width: 30rem;
+        height: 30rem;
         position: absolute;
-        top: 20%;
+        top: 30%;
         left: 55%;
         i {
             position: absolute;
@@ -770,8 +770,8 @@ body {
         order: 0;
         /* width: 264px; */
         width: 56.33%;
-        margin-left: 150px;
-        margin-top: 50px;
+        margin-left: 15rem;
+        margin-top: 5rem;
         /* background-color: var(--color-beige); */
         img {
             width: 100%;
@@ -1178,17 +1178,40 @@ body {
         font-size: 50%;
     }
 
+    .util {
+        top: 80%;
+    }
+
     /* about */
+
+    .about h1.ml8{
+        position: static;
+        margin: 0 auto;
+
+       
+    }
+    .about .ml8 .circle{
+        bottom: 50%;
+       
+        top: auto;
+    }
+    .about .ml8 .circle-dark{
+        margin-bottom: 50px;
+    }
     .about{
         .list{
-            margin-left: 11rem;
-            width: 50%;
+            width: 100%;
+            margin-left: 0;
+
             .item{
+                align-items: center;
+                border-bottom: 1px solid #fff;
                 h4{
-                    display: inline-block;
+                   
+                    cursor: pointer;
                 }
                 ul{
-                  display: none;
+                    display: none;
                     li{
                         font-size: 16px;
                     }
@@ -1203,27 +1226,10 @@ body {
 } /* 970 */
 
 @media screen and (max-width: 880px) {
-    .util {
-        top: 80%;
-        .resume--btn,
-        .work--btn {
-            height: 90px;
-        }
-    }
     h2 {
         font-size: 8rem;
     }
-    .about{
-        .list{
-            .item{
-                ul{
-                    li{
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-    }
+   
 } /* 880 */
 
 @media screen and (max-width: 740px) {
