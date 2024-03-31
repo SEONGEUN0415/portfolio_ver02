@@ -151,7 +151,8 @@ body.on::before {
   top: -50%;
   left: 50%;
   z-index: 55555;
-  padding: 10rem;
+  padding: 10rem 0;
+  width: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
   font-family: var(--font-kr);
