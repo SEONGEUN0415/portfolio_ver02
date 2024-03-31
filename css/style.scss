@@ -1311,6 +1311,9 @@ body {
                     
                    
                 }
+                &__info{
+                    width: 90%;
+                }
                 ul{
                     display: none;
                     li{
@@ -1517,9 +1520,15 @@ body {
         font-size: 5.5rem;
         text-align: center;
     }
+    .work{
+        .inner{
+            box-shadow: 10px 20px 20px 3px rgba(51, 51, 51, 0.568627451);
+        }
+    }
 
     .work02{
         .inner{
+            box-shadow: 10px 20px 20px 3px rgba(51, 51, 51, 0.568627451);
             > ul{
                 gap: 5px;
                 margin: 5.2rem 3rem 7rem;

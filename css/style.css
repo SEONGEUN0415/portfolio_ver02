@@ -1174,6 +1174,9 @@ body.on::before {
     top: 0;
     right: 0;
   }
+  .about .list .item__info {
+    width: 90%;
+  }
   .about .list .item ul {
     display: none;
   }
@@ -1303,6 +1306,12 @@ body.on::before {
   h2 {
     font-size: 5.5rem;
     text-align: center;
+  }
+  .work .inner {
+    box-shadow: 10px 20px 20px 3px rgba(51, 51, 51, 0.568627451);
+  }
+  .work02 .inner {
+    box-shadow: 10px 20px 20px 3px rgba(51, 51, 51, 0.568627451);
   }
   .work02 .inner > ul {
     gap: 5px;
