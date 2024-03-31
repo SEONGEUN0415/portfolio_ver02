@@ -1192,10 +1192,14 @@ body.on::before {
     margin-right: 10px;
   }
   .work .inner .list .item__visual {
+    width: 100%;
     flex-direction: column;
   }
   .work .inner .list .item__visual .mock-up {
     width: 100%;
+  }
+  .work .inner .list .item__visual .mock-up figure:nth-child(2) {
+    left: 0;
   }
   .work .inner .list .item__visual--btn {
     width: 100%;

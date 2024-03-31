@@ -1337,9 +1337,15 @@ body {
                         }
                     }
                     &__visual{
+                        width: 100%;
                         flex-direction: column;
                         .mock-up{
                             width: 100%;
+                            figure{
+                                &:nth-child(2){
+                                    left: 0;
+                                }
+                            }
                         }
                         &--btn{
                             width: 100%;
