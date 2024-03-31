@@ -263,6 +263,20 @@ $(function () {
      
    
     })
+    //about smaller than width 970px change the img
+    if ($(window).width() < 970) {
+        let aboutMovingImg = $('.about h1.ml8');
+        let aboutImg = $('.about .normal--img');
+        aboutMovingImg.css('display','none');
+        aboutImg.css('display', 'block');
+
+    } else {
+        // 화면 너비가 1024px 이상일 때 실행할 코드
+        console.log("큰 화면");
+    }
+    
+
+    //work02
 
     //graphic design tap menu
     let designTapMenu = document.querySelectorAll(".work02 ul li button");

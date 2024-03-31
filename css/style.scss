@@ -603,15 +603,15 @@ body {
 /* skills */
 .skill {
     color: var(--color-white);
-    h3 {
+    /* h3 {
         padding-bottom: 13.5rem;
-    }
+    } */
     .skill__des {
         p {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 2.4rem;
             display: none;
-            margin-bottom: 13.5rem;
+            margin: 8rem 0;
             line-height: 1.3;
             font-family: var(--font-kr);
             &.on {
@@ -628,8 +628,8 @@ body {
             li {
                 cursor: pointer;
                 img {
-                    width: 8rem;
-                    height: 8rem;
+                    width: 5rem;
+                    height: 5rem;
                 }
             }
 
@@ -650,6 +650,17 @@ body {
     position: relative;
     color: var(--color-white);
     font-family: "Avenir Roman";
+    .normal--img{
+        display: none;
+        width: 30%;
+        margin-left: 0;
+        margin: 20px auto;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
     .list {
         margin-left: 50px;
         display: flex;
@@ -663,13 +674,13 @@ body {
             h4 {
                 color: var(--color-yellow);
                 font-size: 3rem;
-                margin-bottom: 2.5rem;
+                padding-bottom: 2.5rem;
                 line-height: 25px;
 
                 &::after {
                     content: "";
                     width: 30px;
-                    height: 25px;
+                    height: 20px;
                     margin-left: 10px;
                     display: inline-block;
                     background: url("../img/star.png") center center / 100%
@@ -1216,15 +1227,21 @@ body {
             .item{
                 align-items: center;
                 border-bottom: 1px solid #fff;
+                text-align: center ;
+                
                 h4{
-                   
+                   text-align: center ;
                     cursor: pointer;
+                   
                 }
                 ul{
                     display: none;
                     li{
                     
                         font-size: 16px;
+                        &::after{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -1344,9 +1361,6 @@ body {
 @media screen and (max-width: 680px) {
     h2 {
         font-size: 6.5rem;
-    }
-    .work{
-
     }
     .work02{
         .inner{

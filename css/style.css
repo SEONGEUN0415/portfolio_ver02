@@ -524,15 +524,15 @@ body.on::before {
 /* skills */
 .skill {
   color: var(--color-white);
-}
-.skill h3 {
-  padding-bottom: 13.5rem;
+  /* h3 {
+      padding-bottom: 13.5rem;
+  } */
 }
 .skill .skill__des p {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   display: none;
-  margin-bottom: 13.5rem;
+  margin: 8rem 0;
   line-height: 1.3;
   font-family: var(--font-kr);
 }
@@ -552,8 +552,8 @@ body.on::before {
   cursor: pointer;
 }
 .skill .skill__des--icon li img {
-  width: 8rem;
-  height: 8rem;
+  width: 5rem;
+  height: 5rem;
 }
 .skill .skill__des--icon::before {
   content: "아이콘을 클릭해 보세요!";
@@ -572,6 +572,18 @@ body.on::before {
   font-family: "Avenir Roman";
   /* .list end */
 }
+.about .normal--img {
+  display: none;
+  width: 30%;
+  margin-left: 0;
+  margin: 20px auto;
+}
+.about .normal--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .about .list {
   margin-left: 50px;
   display: flex;
@@ -584,13 +596,13 @@ body.on::before {
 .about .list .item h4 {
   color: var(--color-yellow);
   font-size: 3rem;
-  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
   line-height: 25px;
 }
 .about .list .item h4::after {
   content: "";
   width: 30px;
-  height: 25px;
+  height: 20px;
   margin-left: 10px;
   display: inline-block;
   background: url("../img/star.png") center center/100% no-repeat;
@@ -1082,8 +1094,10 @@ body.on::before {
   .about .list .item {
     align-items: center;
     border-bottom: 1px solid #fff;
+    text-align: center;
   }
   .about .list .item h4 {
+    text-align: center;
     cursor: pointer;
   }
   .about .list .item ul {
@@ -1091,6 +1105,9 @@ body.on::before {
   }
   .about .list .item ul li {
     font-size: 16px;
+  }
+  .about .list .item ul li::after {
+    display: none;
   }
   /* about end */
   .work .inner .list .item h4 {
