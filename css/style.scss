@@ -370,12 +370,12 @@ body {
 
     .resume--btn,
     .work--btn {
-        height: 135px;
+        height: 13.5rem;
         cursor: pointer;
         .container {
             margin: 0%;
-            height: 200px;
-            width: 200px;
+            height: 20rem;
+            width: 20rem;
             position: relative;
             transition: transform 1s ease-in-out;
             &:hover {
@@ -531,6 +531,7 @@ body {
                 position: relative;
                 text-shadow: 10px 10px 10px var(--color-darkGreen);
                 line-height: 1.3;
+                margin-top: 50px;;
                 > div {
                     height: 130px;
                 }
