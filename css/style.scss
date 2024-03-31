@@ -654,12 +654,20 @@ body {
         display: none;
         width: 30%;
         margin-left: 0;
-        margin: 20px auto;
+        margin: 20px auto 30px;
+        position: relative;
+       
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+    }
+    .twinkleStar{
+        position:absolute;
+        top:10px;
+        right:-100px;
+        z-index: -1;
     }
     .list {
         margin-left: 50px;
@@ -670,12 +678,15 @@ body {
         position: relative;
         gap: 2rem;
         .item {
-            
+                ul{
+                    display: block;
+                }
             h4 {
                 color: var(--color-yellow);
                 font-size: 3rem;
                 padding-bottom: 2.5rem;
                 line-height: 25px;
+                position: relative;
 
                 &::after {
                     content: "";
@@ -792,6 +803,64 @@ body {
     }
 }
 
+//twinkle star
+@keyframes star {
+    to {
+      zoom:10%;
+      opacity:0;
+    }
+    from{
+      zoom:100%;
+        opacity:1;
+    }
+  }
+  .star {
+  animation-name: star;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  
+  }
+  @keyframes star1 {
+    to {
+   
+      opacity:0;
+    }
+    from{
+   
+        opacity:1;
+    }
+  }
+  .star1 {
+  animation-name: star1;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  }
+  @keyframes star2 {
+    0% {
+    opacity:1;
+  }
+  45% {
+  opacity:1;
+  }
+  55% {
+  opacity:0;
+  }
+  100% {
+  opacity:0;
+  }
+  
+  }
+  .star2 {
+  animation-name: star2;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  }
 /* .about end */
 
 /* work */
@@ -1227,11 +1296,19 @@ body {
             .item{
                 align-items: center;
                 border-bottom: 1px solid #fff;
-                text-align: center ;
-                
+                width: 80%;
+                margin: 0 auto;
                 h4{
-                   text-align: center ;
                     cursor: pointer;
+                    color: #fff;
+                    &::after{
+                        display: block;
+                        position: absolute;
+                        top:0;
+                        right: 0;
+                    }
+                
+                    
                    
                 }
                 ul{
@@ -1314,6 +1391,7 @@ body {
     #fp-nav ul li{
         height: 15px;
     }
+
 } /* 970 */
 
 

@@ -576,13 +576,20 @@ body.on::before {
   display: none;
   width: 30%;
   margin-left: 0;
-  margin: 20px auto;
+  margin: 20px auto 30px;
+  position: relative;
 }
 .about .normal--img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.about .twinkleStar {
+  position: absolute;
+  top: 10px;
+  right: -100px;
+  z-index: -1;
 }
 .about .list {
   margin-left: 50px;
@@ -593,11 +600,15 @@ body.on::before {
   position: relative;
   gap: 2rem;
 }
+.about .list .item ul {
+  display: block;
+}
 .about .list .item h4 {
   color: var(--color-yellow);
   font-size: 3rem;
   padding-bottom: 2.5rem;
   line-height: 25px;
+  position: relative;
 }
 .about .list .item h4::after {
   content: "";
@@ -695,6 +706,62 @@ body.on::before {
 .about figure img {
   width: 100%;
   height: 100%;
+}
+
+@keyframes star {
+  to {
+    zoom: 10%;
+    opacity: 0;
+  }
+  from {
+    zoom: 100%;
+    opacity: 1;
+  }
+}
+.star {
+  animation-name: star;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+
+@keyframes star1 {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+.star1 {
+  animation-name: star1;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+
+@keyframes star2 {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.star2 {
+  animation-name: star2;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
 }
 
 /* .about end */
@@ -1094,11 +1161,18 @@ body.on::before {
   .about .list .item {
     align-items: center;
     border-bottom: 1px solid #fff;
-    text-align: center;
+    width: 80%;
+    margin: 0 auto;
   }
   .about .list .item h4 {
-    text-align: center;
     cursor: pointer;
+    color: #fff;
+  }
+  .about .list .item h4::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   .about .list .item ul {
     display: none;

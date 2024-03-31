@@ -252,27 +252,25 @@ $(function () {
 
     //about show the content of each title
     let aboutCategory = $('.about .list .item')
-    
-    aboutCategory.click(function(){
-        aboutCategory.find('ul').slideUp();
-        if($(this).find('ul').css('display','block') = true){
-            $(this).find('ul').slideUp();
-        }else{
-            $(this).find('ul').slideDown();
-        }
-     
-   
-    })
-    //about smaller than width 970px change the img
-    if ($(window).width() < 970) {
-        let aboutMovingImg = $('.about h1.ml8');
+    let aboutMovingImg = $('.about h1.ml8');
         let aboutImg = $('.about .normal--img');
+    
+    //about smaller than width 970px change the img
+    if ($(window).width() < 971) {
+        
         aboutMovingImg.css('display','none');
         aboutImg.css('display', 'block');
 
-    } else {
-        // 화면 너비가 1024px 이상일 때 실행할 코드
-        console.log("큰 화면");
+        aboutCategory.click(function(){
+            aboutCategory.find('ul').slideUp()
+            $(this).find('ul').slideDown();
+            if($(this).find('ul').css('display', 'block') === true){
+                $(this).find('ul').slideUp();
+            }
+         
+       
+        })
+
     }
     
 
