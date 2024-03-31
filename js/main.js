@@ -39,6 +39,9 @@ $(function () {
     });
 
     //modal
+    //modal bg
+
+
     let modal = $(".modal");
     let cancelModalBtn = $(".modal .cancel--icon");
 

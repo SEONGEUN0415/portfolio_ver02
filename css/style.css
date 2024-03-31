@@ -142,6 +142,7 @@ body.on::before {
   max-width: 1280px;
 }
 
+/* modal */
 .modal {
   display: none;
 }
