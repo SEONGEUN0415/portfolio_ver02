@@ -1286,6 +1286,9 @@ body.on::before {
   body {
     font-size: 43.75%;
   }
+  .work .inner .list .item h4 {
+    font-size: 22px;
+  }
   .work .inner .list .item__visual {
     margin: 3rem auto;
   }
