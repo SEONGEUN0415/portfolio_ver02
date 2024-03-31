@@ -1203,7 +1203,7 @@ body.on::before {
     left: 0;
   }
   .work .inner .list .item__visual--btn {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     gap: 10px;
