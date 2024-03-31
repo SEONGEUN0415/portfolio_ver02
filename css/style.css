@@ -137,7 +137,7 @@ body.on::before {
 }
 
 .inner {
-  width: calc(100% - 100px);
+  width: calc(100% - 10rem);
   margin: 0 auto;
   max-width: 1280px;
 }
@@ -1197,6 +1197,16 @@ body.on::before {
   h2 {
     font-size: 5.5rem;
     text-align: center;
+  }
+  .work02 .inner > ul {
+    gap: 5px;
+    margin: 5.2rem 3rem 7rem;
+  }
+  .work02 .inner > ul li button {
+    font-size: 12px;
+  }
+  .work02 .inner .list {
+    margin: 0 3rem;
   }
   .work02 .inner .list:last-child ul li {
     width: 100%;
