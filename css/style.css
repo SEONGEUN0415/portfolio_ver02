@@ -1243,6 +1243,7 @@ body.on::before {
 @media screen and (max-width: 880px) {
   .modal.on {
     width: 80%;
+    padding: 10rem 0;
   }
   h2 {
     font-size: 8rem;
