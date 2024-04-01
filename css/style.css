@@ -341,7 +341,7 @@ body.on::before {
   justify-content: center;
   align-items: center;
   z-index: 888;
-  animation: moveTo 4s linear;
+  animation: utilSlideIn 4s linear;
 }
 .util .resume--btn,
 .util .work--btn {
@@ -406,14 +406,24 @@ body.on::before {
   height: 30%;
 }
 
-@keyframes moveTo {
+@keyframes utilSlideIn {
   0% {
     left: -200px;
     opacity: 0;
   }
   100% {
-    left: 0;
+    left: -20px;
     opacity: 1;
+  }
+}
+@keyframes utilSlideOut {
+  0% {
+    left: -20px;
+    opacity: 1;
+  }
+  100% {
+    left: -200px;
+    opacity: 0;
   }
 }
 /* mainVisual */
@@ -1332,6 +1342,18 @@ body.on::before {
     font-size: 14px;
   }
 } /* 650 */
+@media screen and (max-width: 600px) {
+  .util {
+    bottom: 20px;
+  }
+  .util .resume--btn, .util .work--btn {
+    height: 10rem;
+  }
+  .util .resume--btn .container, .util .work--btn .container {
+    width: 15rem;
+    height: 15rem;
+  }
+}
 @media screen and (max-width: 540px) {
   .main__visual .inner div .container {
     left: 50%;

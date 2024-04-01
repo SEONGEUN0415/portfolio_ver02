@@ -359,16 +359,19 @@ body {
 }
 
 .util {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 888;
-    animation: moveTo 4s linear;
+   
+   
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 888;
+        animation: utilSlideIn 4s linear;
+  
 
     .resume--btn,
     .work--btn {
@@ -482,16 +485,29 @@ body {
         }
     }
 }
-@keyframes moveTo {
+
+@keyframes utilSlideIn {
     0% {
         left: -200px;
         opacity: 0;
     }
     100% {
-        left: 0;
+        left: -20px;
         opacity: 1;
     }
 }
+
+@keyframes utilSlideOut {
+    0% {
+        left: -20px;
+        opacity: 1;
+    }
+    100% {
+        left: -200px;
+        opacity: 0;
+    }
+}
+
 /* mainVisual */
 .star {
     transform-style: preserve-3d;
@@ -605,6 +621,7 @@ body {
 /* skills */
 .skill {
     color: var(--color-white);
+   
     /* h3 {
         padding-bottom: 13.5rem;
     } */
@@ -1251,9 +1268,11 @@ body {
         font-size: 11.5rem;
     }
     .util {
-        bottom: 8rem;
-        top: auto;
-        transform: translateY(0);
+       
+            bottom: 8rem;
+            top: auto;
+            transform: translateY(0);
+        
     }
 }
 
@@ -1263,7 +1282,9 @@ body {
         left: 0;
     }
     .util {
-        left: -20px;
+      
+            left: -20px;
+        
     }
     .main__visual {
         .inner {
@@ -1516,6 +1537,20 @@ body {
         }
     }
 } /* 650 */
+
+@media screen and (max-width: 600px){
+    .util{
+        bottom: 20px;
+        .resume--btn, .work--btn{
+        height: 10rem;
+            .container{
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 540px) {
     .main__visual {
         .inner {

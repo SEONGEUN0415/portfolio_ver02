@@ -1,16 +1,8 @@
 $(function () {
-    //fullpage
-    //graphic design animation
+    //fullpage scroll event
     let designImgs = $(".work02 .list ul li img");
-
+    let utilBtn = $(".util");
     var myFullpage = new fullpage("#fullpage", {
-        /* sectionsColor: [
-          "#1bbc9b",
-          "#4BBFC3",
-          "#7BAABE",
-          "whitesmoke",
-          "#ccddff",
-        ], */
         anchors: ["home", "skill", "about", "work", "design", "contact"],
         navigation: true,
         navigationTooltips: [
@@ -23,12 +15,15 @@ $(function () {
         ],
         showActiveTooltip: true,
         menu: "#menu",
+        //navtooltips end
+
+        //graphic design animation
         onScrollOverflow: function (section, slide, position, direction) {
             if ($("body").hasClass("fp-viewing-design") === true) {
                 designImgs.each(function (item, index) {
                     //index가 각 이미지
                     let designImgTop = $(index).offset().top;
-
+                   
                     /*     console.log(designImgTop); */
                     if (designImgTop - 6500 <= position) {
                         $(index).addClass("active");
@@ -37,9 +32,16 @@ $(function () {
                     } */
                 });
             }
+            
+            if ($("body").hasClass("fp-viewing-skill") === true) {
+                utilBtn.removeClass("on");
+                alert();
+               
+            }
+            
         },
+        
     });
-
     //modal
     //modal bg
 
@@ -76,6 +78,8 @@ $(function () {
         });
     }
     //modal end
+   
+
 
     //cursor effect
     let x1 = 0,
