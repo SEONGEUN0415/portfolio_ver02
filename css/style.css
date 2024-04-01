@@ -1030,10 +1030,13 @@ body.on::before {
 .contact {
   color: var(--color-white);
 }
+.contact div {
+  overflow: hidden;
+}
 .contact div h3 {
-  margin: 30px 0;
+  margin: 50px 0;
   font-family: "GT-Flexa";
-  font-size: 10rem;
+  font-size: 6rem;
   font-weight: 600;
   font-stretch: 180%;
   letter-spacing: 0vw;
@@ -1062,23 +1065,42 @@ body.on::before {
 .contact div address {
   margin: 20px 0;
   text-align: center;
-  font-size: 5rem;
-  /* -webkit-text-stroke: 2px var(--color-darkGreen); */
+  font-size: 3rem;
   font-style: normal;
 }
 .contact div address p {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 1440px;
+}
+.contact div address p a {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.contact div address p a::after {
+  content: "";
+  width: 30px;
+  height: 100%;
+  background: url("../img/star.png") center center/100% no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .contact div address p a img {
   height: 100%;
+  width: 22px;
 }
 .contact .copyRight {
-  padding: 3rem;
+  padding: 10rem 0;
   text-align: center;
-  color: var(--color-darkGreen);
+  color: #fff;
   font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* .contact end */
@@ -1328,7 +1350,7 @@ body.on::before {
   .work02 .inner .list:last-child ul li {
     width: 100%;
   }
-}
+} /* 540 */
 @media screen and (max-width: 480px) {
   html,
   body {
@@ -1354,6 +1376,11 @@ body.on::before {
   }
   h2 {
     font-size: 4rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .contact div h3 {
+    font-size: 5rem;
   }
 }
 @media screen and (max-width: 340px) {
