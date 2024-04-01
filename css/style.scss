@@ -706,7 +706,12 @@ body {
                 padding-bottom: 2.5rem;
                 line-height: 25px;
                 position: relative;
-
+                &.on{
+                    &::after{
+                        animation: rotate360 3s linear infinite;
+                        transform-origin: 50% 50%;
+                    }
+                }
                 &::after {
                     content: "";
                     width: 30px;
@@ -715,6 +720,7 @@ body {
                     display: inline-block;
                     background: url("../img/star.png") center center / 100%
                         no-repeat;
+                       
                 }
             }
             ul {
@@ -875,6 +881,12 @@ body {
     animation-iteration-count: infinite;
     animation-duration: 5s;
     animation-direction: alternate;
+}
+
+@keyframes rotate360{
+	100% {
+    	transform: rotate(360deg);
+    }
 }
 /* .about end */
 

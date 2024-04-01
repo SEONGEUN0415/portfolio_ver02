@@ -258,18 +258,22 @@ $(function () {
     if ($(window).width() < 971) {
         aboutMovingImg.css("display", "none");
         aboutImg.css("display", "block");
-        //2nd menu
+        
         aboutCategory.click(function () {
            
-            //$(this).find("ul").slideDown();
+           //2nd menu
+           //font color change
+           //star rotate
             if ($(this).find("ul").css("display") === "none") {
                 aboutCategory.find("ul").slideUp();
                 aboutCategory.find('h4').css('color','#fff')
                 $(this).find("ul").slideDown();
                 $(this).find('h4').css('color','var(--color-yellow)')
+                $(this).find('h4').addClass('on');
             } else {
                 $(this).find("ul").slideUp();
                 $(this).find('h4').css('color','#fff')
+                $(this).find('h4').removeClass('on');
             }
         });
 

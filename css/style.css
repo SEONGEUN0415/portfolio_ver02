@@ -625,6 +625,10 @@ body.on::before {
   line-height: 25px;
   position: relative;
 }
+.about .list .item h4.on::after {
+  animation: rotate360 3s linear infinite;
+  transform-origin: 50% 50%;
+}
 .about .list .item h4::after {
   content: "";
   width: 30px;
@@ -779,6 +783,11 @@ body.on::before {
   animation-direction: alternate;
 }
 
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* .about end */
 /* work */
 .work {
