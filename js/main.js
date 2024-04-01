@@ -264,9 +264,12 @@ $(function () {
             //$(this).find("ul").slideDown();
             if ($(this).find("ul").css("display") === "none") {
                 aboutCategory.find("ul").slideUp();
+                aboutCategory.find('h4').css('color','#fff')
                 $(this).find("ul").slideDown();
+                $(this).find('h4').css('color','var(--color-yellow)')
             } else {
                 $(this).find("ul").slideUp();
+                $(this).find('h4').css('color','#fff')
             }
         });
 

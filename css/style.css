@@ -1220,6 +1220,7 @@ body.on::before {
   .about .list .item h4 {
     cursor: pointer;
     color: #fff;
+    line-height: 1;
   }
   .about .list .item h4::after {
     display: block;
@@ -1232,6 +1233,7 @@ body.on::before {
   }
   .about .list .item ul li {
     font-size: 16px;
+    margin-bottom: 10px;
   }
   .about .list .item ul li::after {
     display: none;
