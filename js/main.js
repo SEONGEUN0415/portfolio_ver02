@@ -41,7 +41,6 @@ $(function () {
     //modal
     //modal bg
 
-
     let modal = $(".modal");
     let cancelModalBtn = $(".modal .cancel--icon");
 
@@ -254,28 +253,23 @@ $(function () {
     });
 
     //about show the content of each title
-    let aboutCategory = $('.about .list .item')
-    let aboutMovingImg = $('.about h1.ml8');
-        let aboutImg = $('.about .normal--img');
-    
+    let aboutCategory = $(".about .list .item");
+    let aboutMovingImg = $(".about h1.ml8");
+    let aboutImg = $(".about .normal--img");
+
     //about smaller than width 970px change the img
     if ($(window).width() < 971) {
-        
-        aboutMovingImg.css('display','none');
-        aboutImg.css('display', 'block');
+        aboutMovingImg.css("display", "none");
+        aboutImg.css("display", "block");
 
-        aboutCategory.click(function(){
-            aboutCategory.find('ul').slideUp()
-            $(this).find('ul').slideDown();
-            if($(this).find('ul').css('display', 'block') === true){
-                $(this).find('ul').slideUp();
+        aboutCategory.click(function () {
+            aboutCategory.find("ul").slideUp();
+            $(this).find("ul").slideDown();
+            if ($(this).find("ul").css("display", "block") === true) {
+                $(this).find("ul").slideUp();
             }
-         
-       
-        })
-
+        });
     }
-    
 
     //work02
 
@@ -293,4 +287,15 @@ $(function () {
     }
 
     //contact
+    let contactCallNum = $(".contact address");
+    let contactCallIcon = $(".contact .contact__sns--icon .call");
+
+    contactCallIcon.click(function () {
+        if (contactCallNum.css("opacity") === "0") {
+            contactCallNum.css("opacity", "1");
+            
+        } else {
+            contactCallNum.css("opacity", "0");
+        }
+    });
 });

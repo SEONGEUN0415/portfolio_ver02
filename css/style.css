@@ -1066,16 +1066,20 @@ body.on::before {
   border: 1px solid white;
 }
 .contact div address {
+  opacity: 0;
+  padding: 20px;
   margin: 20px 0;
   text-align: center;
   font-size: 3rem;
   font-style: normal;
+  animation: movingRight 6s alternate infinite linear;
+  transition: all 1s ease-in-out;
 }
 .contact div address p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  width: 144rem;
 }
 .contact div address p a {
   width: 100%;
@@ -1084,12 +1088,13 @@ body.on::before {
 }
 .contact div address p a::after {
   content: "";
-  width: 30px;
-  height: 100%;
+  width: 3rem;
+  height: 3rem;
   background: url("../img/star.png") center center/100% no-repeat;
   position: absolute;
   top: 0;
   right: 0;
+  transform: translateX(50%);
 }
 .contact div address p a img {
   height: 100%;
@@ -1107,15 +1112,12 @@ body.on::before {
 }
 
 /* .contact end */
-@keyframes contactAnimate {
+@keyframes movingRight {
   0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-20px);
+    transform: translateX(0%);
   }
   100% {
-    transform: translatey(0px);
+    transform: translateX(-100%);
   }
 }
 /* 50, 43.75, 37.50, 31.25 */

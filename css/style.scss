@@ -1174,29 +1174,33 @@ body {
             }
         }
         address {
+            opacity: 0;
+            padding: 20px;
             margin: 20px 0;
             text-align: center;
             font-size: 3rem;
             font-style: normal;
-
+            animation: movingRight 6s alternate infinite linear;
+            transition: all 1s ease-in-out;
             p {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 1440px;
+                width: 144rem;
                 a {
                     width: 100%;
                     display: block;
                     position: relative;
                     &::after {
                         content: "";
-                        width: 30px;
-                        height: 100%;
+                        width: 3rem;
+                        height: 3rem;
                         background: url("../img/star.png") center center / 100%
                             no-repeat;
                         position: absolute;
                         top: 0;
                         right: 0;
+                        transform: translateX(50%);
                     }
                     img {
                         height: 100%;
@@ -1218,15 +1222,13 @@ body {
     }
 }
 /* .contact end */
-@keyframes contactAnimate {
+@keyframes movingRight {
     0% {
-        transform: translatey(0px);
+        transform: translateX(0%);
     }
-    50% {
-        transform: translatey(-20px);
-    }
+
     100% {
-        transform: translatey(0px);
+        transform: translateX(-100%);
     }
 }
 
