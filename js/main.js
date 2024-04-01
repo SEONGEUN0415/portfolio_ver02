@@ -24,17 +24,19 @@ $(function () {
         showActiveTooltip: true,
         menu: "#menu",
         onScrollOverflow: function (section, slide, position, direction) {
-            designImgs.each(function (item, index) {
-                //index가 각 이미지
-                let designImgTop = $(index).offset().top;
+            if ($("body").hasClass("fp-viewing-design") === true) {
+                designImgs.each(function (item, index) {
+                    //index가 각 이미지
+                    let designImgTop = $(index).offset().top;
 
-                /*     console.log(designImgTop); */
-                if (designImgTop - 2500 <= position) {
-                    $(index).addClass("active");
-                } /* else{
-                    $(index).removeClass("active");
-                } */
-            });
+                    /*     console.log(designImgTop); */
+                    if (designImgTop - 6500 <= position) {
+                        $(index).addClass("active");
+                    } /* else{
+                        $(index).removeClass("active");
+                    } */
+                });
+            }
         },
     });
 
@@ -293,7 +295,6 @@ $(function () {
     contactCallIcon.click(function () {
         if (contactCallNum.css("opacity") === "0") {
             contactCallNum.css("opacity", "1");
-            
         } else {
             contactCallNum.css("opacity", "0");
         }
