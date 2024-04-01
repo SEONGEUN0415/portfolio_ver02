@@ -758,11 +758,11 @@ body {
                             no-repeat;
                         margin-left: 5px;
                     }
-                    &:last-child {
+                    /* &:last-child {
                         &::after {
                             display: none;
                         }
-                    }
+                    } */
                 }
             }
         }
@@ -907,6 +907,7 @@ body {
             margin-bottom: 13.5rem;
         }
         .list {
+            
             .item {
                 margin-bottom: 15rem;
                 h4 {
@@ -926,6 +927,15 @@ body {
                     .mock-up {
                         width: 85%;
                         position: relative;
+                        .qrCode{
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            transform: translateX(-50%);
+                            img{
+                                width: 10rem;
+                            }
+                        }
                         figure {
                             img {
                                 width: 100%;

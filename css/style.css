@@ -660,6 +660,11 @@ body.on::before {
 }
 .about .list__interest ul li {
   line-height: 20px;
+  /* &:last-child {
+      &::after {
+          display: none;
+      }
+  } */
 }
 .about .list__interest ul li::after {
   content: "";
@@ -668,9 +673,6 @@ body.on::before {
   height: 20px;
   background: url(../img/heart-icon.png) center/100% no-repeat;
   margin-left: 5px;
-}
-.about .list__interest ul li:last-child::after {
-  display: none;
 }
 .about h1.ml8 {
   font-weight: 100;
@@ -830,6 +832,15 @@ body.on::before {
 .work .inner .list .item__visual .mock-up {
   width: 85%;
   position: relative;
+}
+.work .inner .list .item__visual .mock-up .qrCode {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(-50%);
+}
+.work .inner .list .item__visual .mock-up .qrCode img {
+  width: 10rem;
 }
 .work .inner .list .item__visual .mock-up figure img {
   width: 100%;
