@@ -1273,6 +1273,10 @@ body.on::before {
   .work .inner .list .item__visual .mock-up {
     width: 100%;
   }
+  .work .inner .list .item__visual .mock-up .qrCode {
+    right: 10%;
+    top: 5%;
+  }
   .work .inner .list .item__visual .mock-up figure:nth-child(2) {
     left: 0;
   }
@@ -1328,6 +1332,11 @@ body.on::before {
     margin-bottom: 10rem;
   }
 } /* 880 */
+@media screen and (max-width: 740px) {
+  .qrCode {
+    display: none;
+  }
+}
 @media screen and (max-width: 740px) {
   h2 {
     font-size: 6.5rem;
