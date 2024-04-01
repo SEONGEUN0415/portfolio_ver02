@@ -1040,7 +1040,6 @@ body.on::before {
   font-weight: 600;
   font-stretch: 180%;
   letter-spacing: 0vw;
-  /* animation: contactAnimate 2s infinite; */
 }
 .contact div h3 br {
   display: none;
@@ -1055,7 +1054,7 @@ body.on::before {
   /*  background-color: var(--color-darkGreen);
   border-radius: 50%;
   padding: 10px; */
-  animation: contactAnimate 2s infinite;
+  animation: contactIconFloat 3s infinite;
 }
 .contact div .contact__sns--icon li img {
   width: 6rem;
@@ -1112,6 +1111,17 @@ body.on::before {
 }
 
 /* .contact end */
+@keyframes contactIconFloat {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
 @keyframes movingRight {
   0% {
     transform: translateX(0%);

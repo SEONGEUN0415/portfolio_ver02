@@ -1146,8 +1146,6 @@ body {
             font-weight: 600; // 100-800
             font-stretch: 180%; // 10-150%
             letter-spacing: 0vw;
-
-            /* animation: contactAnimate 2s infinite; */
             br {
                 display: none;
             }
@@ -1161,7 +1159,7 @@ body {
                 /*  background-color: var(--color-darkGreen);
                 border-radius: 50%;
                 padding: 10px; */
-                animation: contactAnimate 2s infinite;
+                animation: contactIconFloat 3s infinite;
                 img {
                     width: 6rem;
                     height: 6rem;
@@ -1222,6 +1220,20 @@ body {
     }
 }
 /* .contact end */
+@keyframes contactIconFloat {
+    0% {
+       
+        transform: translatey(0px);
+    }
+    50% {
+       
+        transform: translatey(-20px);
+    }
+    100% {
+        
+        transform: translatey(0px);
+    }
+}
 @keyframes movingRight {
     0% {
         transform: translateX(0%);
