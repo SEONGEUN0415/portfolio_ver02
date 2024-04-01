@@ -1156,8 +1156,9 @@ body {
             gap: 20px;
             li {
                 animation: contactIconFloat 3s infinite;
-                :hover{
-                    transform: tr;
+                transition: all 1s ease-in-out;
+                &:hover {
+                    transform: rotate(30deg);
                 }
                 img {
                     width: 6rem;
@@ -1173,21 +1174,22 @@ body {
         address {
             opacity: 0;
             padding: 20px;
-            margin: 20px 0;
+            margin: 30px 0;
             text-align: center;
             font-size: 3rem;
             font-style: normal;
-            animation: movingRight 6s alternate infinite linear;
+
             transition: all 1s ease-in-out;
             p {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 144rem;
+                justify-content: space-between;
+
+                /* width: 144rem; */
+                animation: movingRight 12s infinite linear;
                 a {
-                    width: 100%;
-                    display: block;
                     position: relative;
+                    display: block;
+                    width: 100%;
                     &::after {
                         content: "";
                         width: 3rem;
@@ -1221,25 +1223,23 @@ body {
 /* .contact end */
 @keyframes contactIconFloat {
     0% {
-       
         transform: translatey(0px);
     }
     50% {
-       
         transform: translatey(-20px);
     }
     100% {
-        
         transform: translatey(0px);
     }
 }
+
 @keyframes movingRight {
     0% {
-        transform: translateX(0%);
+        transform: translateX(-100%);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(0%);
     }
 }
 

@@ -1052,9 +1052,10 @@ body.on::before {
 }
 .contact div .contact__sns--icon li {
   animation: contactIconFloat 3s infinite;
+  transition: all 1s ease-in-out;
 }
-.contact div .contact__sns--icon li :hover {
-  transform: tr;
+.contact div .contact__sns--icon li:hover {
+  transform: rotate(30deg);
 }
 .contact div .contact__sns--icon li img {
   width: 6rem;
@@ -1067,23 +1068,22 @@ body.on::before {
 .contact div address {
   opacity: 0;
   padding: 20px;
-  margin: 20px 0;
+  margin: 30px 0;
   text-align: center;
   font-size: 3rem;
   font-style: normal;
-  animation: movingRight 6s alternate infinite linear;
   transition: all 1s ease-in-out;
 }
 .contact div address p {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 144rem;
+  justify-content: space-between;
+  /* width: 144rem; */
+  animation: movingRight 12s infinite linear;
 }
 .contact div address p a {
-  width: 100%;
-  display: block;
   position: relative;
+  display: block;
+  width: 100%;
 }
 .contact div address p a::after {
   content: "";
@@ -1124,10 +1124,10 @@ body.on::before {
 }
 @keyframes movingRight {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
 }
 /* 50, 43.75, 37.50, 31.25 */
