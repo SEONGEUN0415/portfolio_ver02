@@ -1042,6 +1042,9 @@ body.on::before {
   letter-spacing: 0vw;
   /* animation: contactAnimate 2s infinite; */
 }
+.contact div h3 br {
+  display: none;
+}
 .contact div .contact__sns--icon {
   display: flex;
   justify-content: center;
@@ -1365,6 +1368,9 @@ body.on::before {
   }
   .modal.on div span {
     font-size: 12px;
+  }
+  .contact div h3 br {
+    display: block;
   }
 }
 @media screen and (max-width: 430px) {

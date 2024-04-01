@@ -1148,6 +1148,9 @@ body {
             letter-spacing: 0vw;
 
             /* animation: contactAnimate 2s infinite; */
+            br {
+                display: none;
+            }
         }
         .contact__sns--icon {
             display: flex;
@@ -1226,7 +1229,6 @@ body {
         transform: translatey(0px);
     }
 }
-
 
 /* 50, 43.75, 37.50, 31.25 */
 /* mediaquery */
@@ -1572,6 +1574,16 @@ body {
                 }
                 span {
                     font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .contact {
+        div {
+            h3 {
+                br {
+                    display: block;
                 }
             }
         }
