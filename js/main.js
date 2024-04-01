@@ -1,7 +1,7 @@
 $(function () {
     //fullpage scroll event
     let designImgs = $(".work02 .list ul li img");
-    let utilBtn = $(".util");
+
     var myFullpage = new fullpage("#fullpage", {
         anchors: ["home", "skill", "about", "work", "design", "contact"],
         navigation: true,
@@ -23,24 +23,16 @@ $(function () {
                 designImgs.each(function (item, index) {
                     //index가 각 이미지
                     let designImgTop = $(index).offset().top;
-                   
+
                     /*     console.log(designImgTop); */
-                    if (designImgTop - 6500 <= position) {
+                    if (designImgTop <= position) {
                         $(index).addClass("active");
                     } /* else{
                         $(index).removeClass("active");
                     } */
                 });
             }
-            
-            if ($("body").hasClass("fp-viewing-skill") === true) {
-                utilBtn.removeClass("on");
-                alert();
-               
-            }
-            
         },
-        
     });
     //modal
     //modal bg
@@ -78,8 +70,6 @@ $(function () {
         });
     }
     //modal end
-   
-
 
     //cursor effect
     let x1 = 0,
@@ -262,20 +252,35 @@ $(function () {
     let aboutCategory = $(".about .list .item");
     let aboutMovingImg = $(".about h1.ml8");
     let aboutImg = $(".about .normal--img");
+    let util = $(".util");
 
     //about smaller than width 970px change the img
     if ($(window).width() < 971) {
         aboutMovingImg.css("display", "none");
         aboutImg.css("display", "block");
-
+        //2nd menu
         aboutCategory.click(function () {
-            aboutCategory.find("ul").slideUp();
-            $(this).find("ul").slideDown();
-            if ($(this).find("ul").css("display", "block") === true) {
+           
+            //$(this).find("ul").slideDown();
+            if ($(this).find("ul").css("display") === "none") {
+                aboutCategory.find("ul").slideUp();
+                $(this).find("ul").slideDown();
+            } else {
                 $(this).find("ul").slideUp();
             }
         });
+
+        //hide utility
+        aboutCategory.mouseenter(function () {
+            util.addClass("hideActive");
+        });
+        aboutCategory.mouseleave(function () {
+            util.removeClass("hideActive");
+        });
     }
+    //about end
+
+
 
     //work02
 
