@@ -275,7 +275,8 @@ $(function () {
            //star rotate
             if ($(this).find("ul").css("display") === "none") {
                 aboutCategory.find("ul").slideUp();
-                aboutCategory.find('h4').css('color','#fff')
+                aboutCategory.find('h4').css('color','#fff');
+                aboutCategory.find('h4').removeClass('on');
                 $(this).find("ul").slideDown();
                 $(this).find('h4').css('color','var(--color-yellow)')
                 $(this).find('h4').addClass('on');
