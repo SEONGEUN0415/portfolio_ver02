@@ -547,7 +547,7 @@ body.on::before {
   text-align: center;
   font-size: 2.4rem;
   display: none;
-  margin: 8rem 0;
+  margin: 8rem auto;
   line-height: 1.3;
   font-family: var(--font-kr);
 }
@@ -1390,6 +1390,9 @@ body.on::before {
   .util .work--btn .container {
     width: 15rem;
     height: 15rem;
+  }
+  .skill__des p {
+    width: 70%;
   }
 }
 @media screen and (max-width: 540px) {
