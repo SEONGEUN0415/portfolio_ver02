@@ -137,6 +137,15 @@ $(function () {
         }
     });
 
+    //language btn change html
+    $('#toggle').click(function(){
+        setTimeout(function(){
+            $(location).attr('href','sub/index02.html');
+            
+        }, 400)
+        
+    })
+
     //mainvisual typing
 
     var typingBool = false;
