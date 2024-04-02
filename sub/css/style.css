@@ -1320,6 +1320,11 @@ body.on::before {
     height: 15px;
   }
 } /* 970 */
+@media screen and (max-width: 815px) {
+  .about .list .item ul li span {
+    display: block;
+  }
+} /* 880 */
 @media screen and (max-width: 880px) {
   .modal.on {
     width: 80%;
