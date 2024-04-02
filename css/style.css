@@ -366,7 +366,7 @@ body.on::before {
 }
 .util .resume--btn .container img,
 .util .work--btn .container img {
-  width: 25%;
+  width: 30%;
   height: 32%;
   position: absolute;
   top: 50%;
