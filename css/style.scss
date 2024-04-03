@@ -276,7 +276,7 @@ body {
     position: relative;
     .menu__pc {
         position: fixed;
-        z-index: 9999;
+        z-index: 999;
         top: 50%;
         right: 30px;
         transform: translateY(-50%);
@@ -313,7 +313,7 @@ body {
     position: fixed;
     top: 80px;
     left: 30px;
-    z-index: 999;
+    z-index: 9999;
     transform: rotate(-90deg);
     /* display: none; */
     .toggleSwitch {
