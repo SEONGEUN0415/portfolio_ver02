@@ -836,7 +836,7 @@ body.on::before {
 .work .inner .list .item__visual .mock-up .qrCode {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 10%;
   transform: translateX(-50%);
 }
 .work .inner .list .item__visual .mock-up .qrCode img {
